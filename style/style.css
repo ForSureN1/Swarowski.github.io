@@ -63,8 +63,17 @@
 	line-height: 22px;
 	color: #353A4B;
 }
+
+.menu__item:hover {
+    text-shadow:1px 0px 0px black;
+  	transition: 0.3s text-shadow;
+}
+
 .slider__swarowski{
 	width: auto;
+}
+.slider__item > img{
+	
 }
 .slider__item {
 	position: relative;
@@ -80,6 +89,9 @@
     top: 50%;
     transform: translate(0, -50%);
 }
+.slick-slide img{
+	width: 100%;
+}
 
 .slider__item{
 	position: relative;
@@ -93,4 +105,703 @@
 	font-size: 61.2941px;
 	line-height: 58px;
 	color: #353A4B;
+}
+
+.slider__swarowski{
+	overflow-x: hidden;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.slick-dots{
+	bottom: 100px;
+}
+
+.slick-dots {
+	font-size:0;
+	padding:0;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0px 60px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button:before{
+	font-family: Playfair Display;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 35px;
+	color: #FFFFFF;
+}
+.slick-dots li:nth-child(1) button:before{
+	content: "01";
+}
+.slick-dots li:nth-child(2) button:before{
+	content: "03";
+}
+.slick-dots li:nth-child(3) button:before{
+	content: "04";
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: grey;
+}
+
+.slick-dots li:nth-child(1) button:after{
+	position: absolute;
+	content: '';
+	width: 90px;
+	height: 2px;
+	background-color: #FFFFFF;
+	top: 20px;
+    left: 36px;
+	border-radius: 70%;
+}
+
+.slick-dots li:nth-child(2) button:after{
+	position: absolute;
+	content: '';
+	width: 90px;
+	height: 2px;
+	background-color: #FFFFFF;
+	top: 20px;
+    left: 36px;
+	border-radius: 70%;
+}
+
+.new-collection__container{
+	padding: 100px 0;
+}
+.new-collection__title{
+	position: relative;
+}
+.new-collection__title::before{
+	position: absolute;
+	content: "Новые коллекции";
+	bottom: 20%;
+	left: 30%;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 70px;
+	line-height: 70px;
+	color: #B995B1;
+	opacity: 0.4;
+	z-index: -999;
+}
+/*.new-collection__title::after{
+	position: absolute;
+	content: '';
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	background: pink;
+	top: 0;
+	left: 0;
+}*/
+.title__cards {
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 44px;  
+	color: #353A4B;
+	text-align: center;
+	margin-bottom: 50px;
+	letter-spacing: 0.04em;
+}
+
+.new-collection__items{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-column-gap: 20px;
+}
+
+.card {
+	padding: 40px 40px 20px 40px
+}
+.card:hover{
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
+.card img{
+	margin: 0 auto;
+}
+
+.new-collection__desc {
+	margin: 30px 0;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 25px;
+	display: flex;
+	align-items: flex-end;
+	letter-spacing: 0.04em;
+	color: #353A4B;
+}
+
+.new-collection__price p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 25px;
+	display: flex;
+	align-items: flex-end;
+	letter-spacing: 0.04em;
+	color: #333333;
+}
+
+.buy{
+	border: none;
+	cursor: pointer;
+}
+
+.view-all{
+	display: flex;
+    justify-content: center;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	color: #000000;
+	margin-top: 30px;
+}
+
+.view-all__link{
+	position: relative;
+}
+.view-all__link::before{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 15px;
+	background-color: #FFF;
+	top: 25px;
+	left: 0;
+	transition: .8s;
+}
+.view-all__link:hover::before{
+	left: 150px;
+}
+.jewerly__container{
+	padding: 100px 0;
+}
+.jewerly__title{
+	position: relative;
+}
+.jewerly__title::before {
+    position: absolute;
+    content: "Категории ювелирных изделий";
+    bottom: 20%;
+    left: 16%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+.jewerly__items{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    grid-row-gap: 50px;
+    grid-column-gap: 20px;
+}
+.jewerly__item img {
+    margin: 0 auto;
+}
+.jewerly__desc{
+	padding: 30px 50px;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	letter-spacing: 0.04em;
+	color: #353A4B;
+}
+
+.jewerly__item:hover{
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
+
+.sale__container{
+	padding: 100px 0;
+}
+.sale__title{
+	position: relative;
+}
+.sale__title::before {
+    position: absolute;
+    content: "Распродажа";
+    bottom: 20%;
+    left: 37%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+.sale__items {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    grid-column-gap: 20px;
+}
+
+.sale__item img{
+	margin: 0 auto;
+}
+
+.sale__desc{
+	padding: 30px 60px;
+	text-align: center;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	color: #5A5E6B;
+}
+
+.sale__buy {
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	background: #B995B1;
+	border-radius: 2px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 25px;
+	padding: 20px 0;
+	color: #FFFFFF;
+}
+
+.sale__buy:hover{
+	background: #FFF;
+	border: 1px solid #B995B1;
+	color: #B995B1;
+	transition: .5s;
+}
+
+.sale__item:hover img{
+	transform: scale(1.1);
+	transition: .5s;
+}
+.clock__container{
+	padding: 100px 0;
+}
+.clock__title{
+	position: relative;
+}
+.clock__title::before {
+    position: absolute;
+    content: "Часы";
+    bottom: 20%;
+    left: 44%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+.clock__items{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+	grid-column-gap: 20px;
+}
+.clock__desc{
+	padding: 30px 0;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	color: #353A4B;
+	text-align: center;
+}
+
+.clock__price p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	color: #333333;
+}
+
+.accessories__container{
+	padding: 100px 0;
+}
+.accessories__title{
+	position: relative;
+}
+.accessories__title::before {
+    position: absolute;
+    content: "Акссессуары";
+    bottom: 20%;
+    left: 37%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+.accessories__items,
+.accessories__right-top,
+.accessories__right-bot{
+	display: flex;
+}
+
+.accessories__left,
+.accessroies__eyes,
+.accessories__hands,
+.accessories__ear{
+	position: relative;
+}
+
+.accessories__left{
+	margin-right: 30px;
+}
+
+.left__text{
+	position: absolute;
+	top: 50%;
+    transform: translate(0, -50%);
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 60px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	left: 23%;
+}
+.accessroies__eyes p{
+	position: absolute;
+	top: 50%;
+    transform: translate(0, -50%);
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 60px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	left: 30%;
+}
+
+.accessories__ear p{
+	position: absolute;
+	top: 50%;
+    transform: translate(0, -50%);
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 60px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	left: 5%;
+}
+.accessories__hands p{
+	position: absolute;
+	top: 50%;
+    transform: translate(0, -50%);
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 60px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	left: 12%;
+}
+.accessories__hands{
+	margin-left: 30px;
+}
+.accessories__right-bot{
+	margin-top: 45px;
+}
+.accessories__view{
+	margin-left: 200px;
+	margin-top: 145px;
+}
+
+.accessories__left::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	border: 1px solid #B995B1;
+	top: -15px;
+}
+
+.accessories__right-top{
+	position: relative;
+}
+
+.accessories__right-top::before,
+.accessories__right-top::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	border: 1px solid #B995B1;
+}
+
+.accessories__right-top::before{
+	top: -15px;
+}
+.accessories__right-top::after{
+	bottom: -30px;
+}
+.accessories__left:hover,
+.accessroies__eyes:hover,
+.accessories__hands:hover,
+.accessories__ear:hover{
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
+
+.accessories__link{
+	position: relative;
+	padding: 90px 30px;
+	border: 1px solid black;
+	border-radius: 100%;
+	font-family: Playfair Display;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+}
+
+.accessories__link::before{
+	content: "";
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	background-color: #fff;
+	top: 0;
+	right: 38px;
+    animation: moving 3s infinite linear;
+    transform-origin: -40px 100px;
+    border-radius: 100%;
+}
+
+
+@keyframes moving {
+    100% {transform: rotate(-360deg);}
+}
+
+.accessories__link::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 60%;
+	left: 10%;
+	background: url('../images/vector.svg') no-repeat;
+	animation: blick 3s linear infinite;
+}
+
+@keyframes blick{
+	0%{opacity: 1;}
+	25%{opacity: 0.5;}
+	50%{opacity: 0.0;}
+	75%{opacity: 0.5}
+	100%{opacity: 1}
+}
+.decorations__container{
+	padding: 100px 0;
+}
+.decorations__title{
+	position: relative;
+}
+.decorations__title::before {
+    position: absolute;
+    content: "Украшения";
+    bottom: 20%;
+    left: 38%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+.decorations__items{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(423px, 1fr));
+	grid-gap: 20px; 
+}
+.decoration__item{
+	padding: 30px 50px;
+}
+.decoration__item:hover{
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
+.decoration__item img{
+	margin: 0 auto;
+}
+
+.decorations__desc{
+	margin-top: 42px;
+	margin-bottom: 32px;
+	font-family: Playfair Display;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+}
+
+.decorations__price  p{
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+}
+
+.home__container{
+	padding: 100px 0;
+}
+.home__title{
+	position: relative;
+}
+.home__title::before {
+    position: absolute;
+    content: "Всё для дома";
+    bottom: 20%;
+    left: 37%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+.home__items{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(390px,1fr));
+	grid-gap: 20px;
+}
+.home__item{
+	padding: 70px 40px 30px 40px;
+}
+.home__item:hover{
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
+.home__item img {
+	margin: 0 auto;
+}
+
+.home__desc{
+	font-family: Playfair Display;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	margin-top: 16px;
+	margin-bottom: 33px;
+}
+
+.home__price{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	color: #333333;
+}
+
+.video__container{
+	padding: 100px 0;
+}
+.video__title{
+	position: relative;
+}
+.video__title::before {
+    position: absolute;
+    content: "Откройте для себя Swarovski Swan";
+    bottom: 20%;
+    left: 14%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #B995B1;
+    opacity: 0.4;
+    z-index: -999;
+}
+
+.footer__container{
+	padding: 50px 0;
+	border-top: 1px solid #5A5E6B;
+	border-bottom: 1px solid #5A5E6B;
+}
+
+.footer__logo{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.copyright{
+	padding: 50px 0;
+	font-family: Uk_Antique;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 0em;
+}
+
+.footer__socials{
+	display: flex;
+	justify-content: center;
+	margin-top: 45px;
+}
+
+.footer__inst{
+	margin: 0 30px;
 }
