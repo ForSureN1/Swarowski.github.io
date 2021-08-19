@@ -54,7 +54,7 @@ a{
 
 /* Упрощаем работу с изображениями */
 img {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
 
