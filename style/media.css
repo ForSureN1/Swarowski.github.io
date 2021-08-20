@@ -168,8 +168,12 @@
 	.container {
 		max-width: 900px;
 	}
+	.header__phone p,
+	.header__language p {
+		font-size: 14px;
+	}
 	.slider__swarowski{
-    	padding-top: 140px;
+    	padding-top: 100px;
   	}
 	.menu__items {
 		display: none;
@@ -221,11 +225,99 @@
 	.copyright,
 	.video__container,
 	.bot__container,
-	.slider__container {
+	.slider__container,
+	.sale__container,
+	.jewerly__container {
 		margin: 0 20px;
 	}
 	.accessories__right-top {
 		margin-right: 20px;
 		margin-left: 20px;
 	}
+	.slick-dots {
+		display: none;
+	}
+	.slider__logo img {
+		width: 20%;
+	}
+	.slider__text {
+		font-size: 20px;
+		margin-top: 5px;
+		line-height: 20px;
+	}
+	.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
+		font-size: 40px;
+	}
+	.title__cards {
+		font-size: 30px;
+	}
+	.new-collection__items,
+	.jewerly__items,
+	.sale__items,
+	.clock__items,
+	.decorations__items,
+	.home__items {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 10px;
+	}
 }
+@media(max-width: 576px) {
+		.top__container {
+			padding: 10px 0;
+		}
+		.header__phone p, .header__language p {
+			font-size: 8px;
+		}
+		.header__phone {
+			margin-left: 10px;
+		}
+		.accessories__view {
+			display: none;
+		}
+		.left__text, .accessroies__eyes p, .accessories__hands p, .accessories__ear p {
+			font-size: 20px;
+		}
+		.accessories__ear img {
+		    width: 50%;
+		    margin: 0 auto;
+		}
+		.new-collection__container,
+		.jewerly__container,
+		.sale__container,
+		.clock__container,
+		.accessories__container,
+		.decorations__container,
+		.home__container,
+		.video__container {
+			padding: 15px 0;
+		}
+		.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
+			font-size: 24px;
+			line-height: 25px;
+		}
+		.title__cards {
+			font-size: 20px;
+		}
+		.new-collection__desc {
+			margin: 10px;
+			font-size: 14px;
+		}
+		.sale__buy {
+			padding: 10px 0;
+		}
+		.view-all {
+			font-size: 16px;
+		}
+		.accessories__right-bot {
+			display: block;
+		}
+		.home__item {
+			padding: 20px 15px 10px 15px;
+		}
+		.decoration__item {
+			padding: 10px 20px;
+		}
+		.card {
+			padding: 20px 20px 10px 20px;
+		}
+	}
