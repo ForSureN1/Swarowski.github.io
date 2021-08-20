@@ -267,6 +267,9 @@
     	width: 70%;
     	margin: 0 auto;
 	}
+	.copyright {
+		font-size: 14px;
+	}
 }
 @media(max-width: 576px) {
 		.top__container {
