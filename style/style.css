@@ -1,3 +1,12 @@
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	background: #fff;
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+	-webkit-transform: translateZ(0);
+}
+
 .top__container{
 	display: flex;
 	justify-content: space-between;
@@ -192,7 +201,7 @@
 	font-size: 70px;
 	line-height: 70px;
 	color: #B995B1;
-	opacity: 0.4;
+	opacity: 0.15;
 	z-index: -999;
 }
 /*.new-collection__title::after{
@@ -308,7 +317,7 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 .jewerly__items{
@@ -320,6 +329,8 @@
 .jewerly__item img {
     margin: 0 auto;
 }
+
+
 .jewerly__desc{
 	padding: 30px 50px;
 	font-family: Playfair Display;
@@ -354,13 +365,13 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 .sale__items {
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-    grid-column-gap: 20px;
+    grid-gap: 20px;
 }
 
 .sale__item img{
@@ -396,15 +407,12 @@
 
 .sale__buy:hover{
 	background: #FFF;
-	border: 1px solid #B995B1;
+	outline: 1px solid #B995B1;
+	outline-radius: 2px;
 	color: #B995B1;
 	transition: .5s;
 }
 
-.sale__item:hover img{
-	transform: scale(1.1);
-	transition: .5s;
-}
 .clock__container{
 	padding: 100px 0;
 }
@@ -422,7 +430,7 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 .clock__items{
@@ -469,7 +477,7 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 .accessories__items,
@@ -489,52 +497,15 @@
 	margin-right: 30px;
 }
 
-.left__text{
-	position: absolute;
-	top: 50%;
-    transform: translate(0, -50%);
-	font-family: Playfair Display;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 72px;
-	line-height: 60px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	left: 23%;
-}
-.accessroies__eyes p{
-	position: absolute;
-	top: 50%;
-    transform: translate(0, -50%);
-	font-family: Playfair Display;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 72px;
-	line-height: 60px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	left: 30%;
-}
-
-.accessories__ear p{
-	position: absolute;
-	top: 50%;
-    transform: translate(0, -50%);
-	font-family: Playfair Display;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 72px;
-	line-height: 60px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	left: 5%;
-}
+.left__text,
+.accessroies__eyes p,
+.accessories__ear p,
 .accessories__hands p{
 	position: absolute;
 	top: 50%;
+	left: 0;
+    right: 0;
+    text-align: center;
     transform: translate(0, -50%);
 	font-family: Playfair Display;
 	font-style: normal;
@@ -544,8 +515,8 @@
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #FFFFFF;
-	left: 12%;
 }
+
 .accessories__hands{
 	margin-left: 30px;
 }
@@ -657,7 +628,7 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 .decorations__items{
@@ -713,7 +684,7 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 .home__items{
@@ -770,7 +741,7 @@
     font-size: 70px;
     line-height: 70px;
     color: #B995B1;
-    opacity: 0.4;
+    opacity: 0.15;
     z-index: -999;
 }
 
@@ -805,3 +776,42 @@
 .footer__inst{
 	margin: 0 30px;
 }
+
+
+/*-----------------------------------burger---------------------------------*/
+
+
+.burger{
+	display: none;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	background: url(../images/burger.svg) no-repeat;
+	background-size: contain;
+	transition: .3s;
+}
+
+.burger_active{
+	width: 40px;
+	height: 40px;
+	background: url(../images/close.svg) no-repeat;
+	background-size: contain;
+	transition: .3s;
+}
+
+
+/*-----------------------------------burger---------------------------------*/
+
+.new-collection__title::before,
+.view-all__link::before,
+.jewerly__title::before,
+.sale__title::before,
+.clock__title::before,
+.accessories__title::before,
+.decorations__title::before,
+.home__title::before,
+.video__title::before {
+	left: 0;
+	right: 0;
+}
+
