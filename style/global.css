@@ -81,7 +81,13 @@ select {
   }
 }
 
-.container {
-  max-width: 1620px;
-  margin: 0 auto;
+
+@media (min-width: 1200px){
+    .container {
+    max-width: 1620px;
+    margin: 0 auto;
+  }
+  .slider__swarowski{
+    padding-top: 170px;
+  }
 }
