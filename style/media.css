@@ -3,6 +3,9 @@
 		max-width: 1000px;
 		margin: 0 auto;
 	}
+	.dispnone {
+		display: none;
+	}
 	.slider__swarowski{
     	padding-top: 150px;
   	}
