@@ -314,6 +314,9 @@
 							<div class="accessories__view">
 								<a href="" class="accessories__link">Посмотреть все</a>
 							</div>
+							<div class="new-collection__view view-all">
+								<a href="#" class="view-all__link">Посмотреть все <img src="images/arrow.png" alt=""></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -487,7 +490,14 @@
 			infinite: true,
 			dots: true,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						dots: false,
+					}
+				}]
 		}); 
 	</script>
 </body>
