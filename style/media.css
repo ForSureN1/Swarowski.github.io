@@ -297,6 +297,7 @@
 		.home__container,
 		.video__container {
 			padding: 15px 0;
+			margin: 0 20px;
 		}
 		.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
 			font-size: 0;
