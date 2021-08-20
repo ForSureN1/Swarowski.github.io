@@ -260,6 +260,10 @@
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		grid-gap: 10px;
 	}
+	.footer__logo {
+    	width: 70%;
+    	margin: 0 auto;
+	}
 }
 @media(max-width: 576px) {
 		.top__container {
@@ -292,8 +296,7 @@
 			padding: 15px 0;
 		}
 		.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
-			font-size: 24px;
-			line-height: 25px;
+			font-size: 0;
 		}
 		.title__cards {
 			font-size: 20px;
