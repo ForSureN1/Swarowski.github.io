@@ -16,6 +16,8 @@
 	}
 	.header__logo {
 	    width: 40%;
+	    display: flex;
+	    align-items: center;
 	}
 	.slider__logo img{
 		width: 50%;
