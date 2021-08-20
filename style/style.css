@@ -629,7 +629,7 @@
 	height: 100%;
 	top: 60%;
 	left: 10%;
-	background: url('/images/vector.svg') no-repeat;
+	background: url('../images/vector.svg') no-repeat;
 	animation: blick 3s linear infinite;
 }
 
