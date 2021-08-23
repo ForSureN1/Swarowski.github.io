@@ -77,7 +77,9 @@
     text-shadow:1px 0px 0px black;
   	transition: 0.3s text-shadow;
 }
-
+.slider__swarowski{
+    	padding-top: 150px;
+  	}
 .slider__swarowski{
 	width: auto;
 }
