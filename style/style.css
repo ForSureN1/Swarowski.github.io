@@ -484,33 +484,33 @@
     opacity: 0.15;
     z-index: -999;
 }
-/*.left__image {
+.left__image {
 
 }
-.accessories__right{
-	width: 51%;
-}
+/*.accessories__right{
+	width: 49%;
+}*/
+
 .left__image img{
 	width: 683px;
-	height: 683px;
 }
+
 .accessroies__eyes img {
 	width: 557px;
-	height: 289px;
+	/*height: 289px;*/
 }
 .accessories__hands img {
 	width:  320px;
-	height: 289px;
+	/*height: 289px;*/
 }
 .accessories__ear img {
 	width: 320px;
-	height: 294px;
-}*/
+	/*height: 294px;*/
+}
 .accessories__items,
 .accessories__right-top,
 .accessories__right-bot{
 	display: flex;
-	justify-content: space-between;
 }
 
 .accessories__left,
@@ -520,8 +520,16 @@
 	position: relative;
 }
 
-.accessories__left{
-	margin-right: 30px;
+/*.accessories__left{
+	margin-right: auto;
+}*/
+/*.left__image img {
+	max-width: 638px;
+	max-height: 628px;
+}*/
+.accessories__right {
+	width: 58%;
+	margin-left: 30px;
 }
 
 .left__text,
@@ -553,6 +561,7 @@
 .accessories__view{
 	display: flex;
     align-items: center;
+    margin-left: 177px;
 }
 
 .accessories__left::before{
@@ -851,3 +860,5 @@
 	left: 0;
 	right: 0;
 }
+
+
