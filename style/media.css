@@ -1,4 +1,21 @@
-@media (max-width: 1199px){
+@media(max-width: 1400px) {
+	.accessories__items {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.accessories__items, .accessories__right-top, .accessories__right-bot {
+    	display: flex;
+    	justify-content: space-around;
+    	margin-top: 40px;
+	}
+	.accessories__left {
+	    margin: 0 auto;
+	}
+	.accessories__right {
+		width: 100%;
+	}
+}
+@media (max-width: 1200px){
 	.container{
 		max-width: 1000px;
 		margin: 0 auto;
@@ -85,6 +102,9 @@
 	.accessories__title::before{
 		font-size: 55px;
 	}
+	.accessories__right {
+		width: 100%;
+	}
 	.accessories__items {
 		flex-direction: column;
 	}
@@ -92,9 +112,9 @@
 	    display: flex;
 	    justify-content: center;
 	}
-	.left__image img {
+	/*.left__image img {
 		width: 60%;
-	}
+	}*/
 	.left__text,
 	.accessroies__eyes p,
 	.accessories__hands p,
@@ -212,11 +232,14 @@
     	font-size: 40px;
 	}
 	.left__image img {
-    	width: 100%;
+    	width: 94%;
 	}
 	.accessories__hands {
     	margin-left: 15px;
     	margin-top: 0px;
+	}
+	.accessories__right {
+		margin: 0;
 	}
 	.accessories__left {
 		margin: 0;
@@ -318,8 +341,14 @@
 			font-size: 20px;
 		}
 		.accessories__ear img {
-		    width: 50%;
 		    margin: 0 auto;
+		}
+		.left__image img {
+			height: 100%;
+		}
+		.accessories__right {
+    		width: 100%;
+    		margin: 0;
 		}
 		.new-collection__container,
 		.jewerly__container,
