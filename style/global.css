@@ -92,14 +92,14 @@ select {
   }
 }
 
-@media (max-width: 1649px) {
+@media (max-width: 1620px) {
   .container {
     max-width: 1400px;
     margin: 0 auto;
   }
 }
 
-@media(max-width: 1440px) {
+@media(max-width: 1400px) {
   .container {
     max-width: 1200px;
     margin: 0 auto;
