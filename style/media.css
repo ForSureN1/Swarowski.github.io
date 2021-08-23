@@ -212,7 +212,11 @@
     	font-size: 40px;
 	}
 	.left__image img {
-    	width: 50%;
+    	width: 100%;
+	}
+	.accessories__hands {
+    	margin-left: 15px;
+    	margin-top: 0px;
 	}
 	.accessories__left {
 		margin: 0;
@@ -319,6 +323,14 @@
 		}
 		.view-all {
 			font-size: 16px;
+		}
+		.accessories__right-top {
+			flex-direction: column;
+			align-items: center;
+		}
+		.accessories__hands {
+			margin-left: 0;
+			margin-top: 15px;
 		}
 		.accessories__right-bot {
 			display: block;
