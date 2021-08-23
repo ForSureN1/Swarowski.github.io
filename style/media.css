@@ -278,18 +278,27 @@
 	}
 	.new-collection__item img {
 		height: 152px;
+		width: 152px;
 	}
 	.jewerly__item img {
 		height: 202px;
+		width: 202px;
 	}
 	.sale__item img {
 		height: 202px;
+		width: 202px;
 	}
 	.clock__item > img {
 		height: 152px;
+		width: 152px;
 	}
 	.home__item img {
 		height: 152px;
+		width: 152px;
+	}
+	.decoration__item img {
+    	width: 423px;
+    	height: 120px;
 	}
 }
 @media(max-width: 576px) {
