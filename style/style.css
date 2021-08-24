@@ -485,15 +485,17 @@
     z-index: -999;
 }
 .left__image {
-
+	display: flex;
+    max-width: 683px;
+    height: 100%;
 }
 /*.accessories__right{
 	width: 49%;
 }*/
 
-.left__image img{
+/*.left__image img{
 	width: 683px;
-}
+}*/
 
 .accessroies__eyes img {
 	width: 557px;
@@ -528,7 +530,7 @@
 	max-height: 628px;
 }*/
 .accessories__right {
-	width: 58%;
+	width: 59%;
 	margin-left: 30px;
 }
 
