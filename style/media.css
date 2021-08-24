@@ -255,7 +255,7 @@
 	.slider__container {
 		align-items: flex-start;
 	}
-	.top__container,
+	/*.top__container,
 	.copyright,
 	.video__container,
 	.bot__container,
@@ -263,7 +263,7 @@
 	.sale__container,
 	.jewerly__container {
 		margin: 0 20px;
-	}
+	}*/
 	.accessories__right-top {
 		margin-right: 20px;
 		margin-left: 20px;
