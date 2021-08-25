@@ -17,7 +17,7 @@
 }
 @media (max-width: 1200px){
 	.container{
-		max-width: 1000px;
+		/*max-width: 1000px;*/
 		margin: 0 auto;
 	}
 	.dispnone {
@@ -32,7 +32,7 @@
     	padding: 30px 0;
 	}
 	.header__logo {
-	    width: 40%;
+	    width: 30%;
 	    display: flex;
 	    align-items: center;
 	}
@@ -189,6 +189,22 @@
 	.copyright {
 		padding: 20px 0;
 	}
+	.path__container {
+		padding-top: 200px;
+		padding-bottom: 20px;
+	}
+	.contacts__container {
+    	padding: 50px 0 15px 0;
+	}
+	.feedback__container {
+		padding: 50px 0;
+	}
+	.feedback__commentary {
+		margin-top: 30px;
+	}
+	.contacts__info a {
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 992px) {
@@ -279,7 +295,7 @@
 		margin-top: 5px;
 		line-height: 20px;
 	}
-	.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
+	.conctacts__title::before,.feedback__title::before,.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
 		font-size: 40px;
 	}
 	.title__cards {
@@ -325,6 +341,25 @@
     	width: 423px;
     	height: 120px;
 	}
+	.contacts__info {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.contacts__info div {
+		margin-top: 15px;
+	}
+	.feedback__name {
+		margin-right: 0;
+	}
+	.feedback__data {
+		display: block
+	}
+	.feedback__name, .feedback__phone {
+		width: 100%;
+	}
+	.input__phone {
+		margin-top: 30px;
+	}
 }
 @media(max-width: 576px) {
 		.top__container {
@@ -363,7 +398,7 @@
 			padding: 15px 0;
 			margin: 0 20px;
 		}
-		.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
+		.contacts__title::before,.feedback__title::before,.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
 			font-size: 0;
 		}
 		.title__cards {
@@ -398,5 +433,15 @@
 		}
 		.card {
 			padding: 20px 20px 10px 20px;
+		}
+		.path__container{
+			padding-top: 130px;
+			padding-bottom: 0;
+		}
+		.contacts__container {
+			padding-top: 30px;
+		}
+		.gismap {
+			height: 200px;
 		}
 	}
