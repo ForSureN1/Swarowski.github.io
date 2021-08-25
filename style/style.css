@@ -228,7 +228,7 @@
 .new-collection__items{
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    grid-column-gap: 20px;
+    grid-gap: 20px;
 }
 
 .card {
@@ -237,11 +237,10 @@
 .card__flex {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 .card:hover{
-	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
-	transition: .2s;
+	
 }
 .card img{
 	margin: 0 auto;
@@ -446,7 +445,7 @@
 .clock__items{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-	grid-column-gap: 20px;
+	grid-gap: 20px;
 }
 .clock__item > img {
 	width: 286px;
@@ -681,15 +680,15 @@
 }
 .decorations__items{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 	grid-gap: 20px; 
 }
 .decoration__item{
 	padding: 30px 50px;
 }
 .decoration__item img {
-	width: 350px;
-	height: 212px;
+	width: 270px;
+	height: 270px;
 }
 .decoration__item:hover{
 	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
@@ -969,4 +968,177 @@
 	font-size: 20px;
 	line-height: 28px;
 	color: #787C8B;
+}
+
+.jewerly__buy {
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+.card__items {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-gap: 20px;
+}
+
+.card__desc {
+	padding: 30px 0;
+	text-align: center;
+	font-family: Playfair Display;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+.card__price {
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px;
+	padding: 0 30px 35px 30px;
+}
+
+.card__item:hover {
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
+
+.contacts__container {
+	padding: 100px 0 30px 0;
+}
+
+.contacts__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contacts__phone,
+.contacts__street,
+.contacts__email {
+	display: flex;
+	align-items: center;
+}
+
+.contacts__info a{
+	margin-left: 15px;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.feedback__container {
+	padding: 100px 0;
+}
+
+.feedback__form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+}
+.feedback__data {
+    display: flex;
+    text-align: left;
+}
+.feedback__name,
+.feedback__phone {
+	height: 59px;
+	width: 408px;
+}
+.feedback__name{
+	margin-right: 50px;
+}
+.feedback__phone,
+.feedback__name,
+.feedback__area {
+	position: relative;
+	background: #FFFFFF;
+	border: 0.5px solid #949494;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.feedback__commentary {
+	margin-top: 60px;
+	text-align: left;
+}
+
+.feedback__area {
+	width: 100%;
+	min-height: 110px;
+	resize: vertical;
+}
+
+.feedback__send {
+	margin-top: 30px;
+	padding: 20px 115px;
+	cursor: pointer;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px;
+	background: #A06593;
+	border: none;
+	color: #FFFFFF;
+	transition: .5s;
+}
+
+.feedback__send:hover {
+	background: #FFF;
+	color: #A06593;
+	outline: 1px solid #A06593;
+}
+
+.contacts__title {
+	position: relative;
+}
+
+.contacts__title::before {
+    position: absolute;
+    content: "Контакты";
+    bottom: 20%;
+    right: 0;
+    left: 0;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: rgb(185, 149, 177);
+    opacity: 0.15;
+    z-index: -999;
+}
+
+.feedback__title {
+	position: relative;
+}
+
+.feedback__title::before {
+    position: absolute;
+    content: "Обратная связь";
+    bottom: 20%;
+    right: 0;
+    left: 0;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: rgb(185, 149, 177);
+    opacity: 0.15;
+    z-index: -999;
 }
