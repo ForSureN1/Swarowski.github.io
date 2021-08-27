@@ -188,10 +188,10 @@
     left: 36px;
 	border-radius: 70%;
 }
-
-.new-collection__container{
+.content {
 	padding: 100px 0;
 }
+
 .new-collection__title{
 	position: relative;
 }
@@ -304,9 +304,7 @@
 .view-all__link:hover::before{
 	left: 150px;
 }
-.jewerly__container{
-	padding: 100px 0;
-}
+
 .jewerly__title{
 	position: relative;
 }
@@ -355,9 +353,6 @@
 	transition: .2s;
 }
 
-.sale__container{
-	padding: 100px 0;
-}
 .sale__title{
 	position: relative;
 }
@@ -422,9 +417,7 @@
 	transition: .5s;
 }
 
-.clock__container{
-	padding: 100px 0;
-}
+
 .clock__title{
 	position: relative;
 }
@@ -473,9 +466,7 @@
 	color: #333333;
 }
 
-.accessories__container{
-	padding: 100px 0;
-}
+
 .accessories__title{
 	position: relative;
 }
@@ -658,9 +649,7 @@
 	75%{opacity: 0.5}
 	100%{opacity: 1}
 }
-.decorations__container{
-	padding: 100px 0;
-}
+
 .decorations__title{
 	position: relative;
 }
@@ -718,9 +707,7 @@
 	letter-spacing: 0.04em;
 }
 
-.home__container{
-	padding: 100px 0;
-}
+
 .home__title{
 	position: relative;
 }
@@ -777,9 +764,7 @@
 	color: #333333;
 }
 
-.video__container{
-	padding: 100px 0;
-}
+
 .video__title{
 	position: relative;
 }
@@ -1035,10 +1020,6 @@
 	line-height: 22px;
 }
 
-.feedback__container {
-	padding: 100px 0;
-}
-
 .feedback__form {
     display: flex;
     justify-content: center;
@@ -1141,4 +1122,235 @@
     color: rgb(185, 149, 177);
     opacity: 0.15;
     z-index: -999;
+}
+
+.about-item__images {
+	display: grid;
+	grid-template-columns: 168px 742px;
+	grid-template-rows: repeat(4, 168px);
+	grid-column-gap: 30px;
+	grid-row-gap: 15px;
+}
+.about-item__images div{
+	cursor: pointer;
+}
+.about-item__photo.grid-1 img {
+    width: 100%;
+    height: 100%;
+}
+.grid-1{
+	grid-column-start: 2;
+	grid-row-start: 1;
+	grid-row-end: 5;
+}
+
+.grid-2 {
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.grid-3 {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+
+.grid-4 {
+	grid-column-start: 1;
+	grid-row-start: 3;
+}
+
+.grid-5 {
+	grid-column-start: 1;
+	grid-row-start: 4;
+}
+
+
+
+.about-item__container {
+	padding: 50px 0 100px 0;
+}
+
+.about-item__content {
+	display: flex;
+}
+
+.about-item__specification {
+	margin-left: 30px;
+	flex: 0 0 auto;
+}
+
+.about-item__header {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #787C8B;
+}
+
+.about-item__name {
+	margin-top: 50px;
+	font-family: Playfair Display;
+	font-size: 36px;
+	line-height: 30px;
+}
+
+.about-item__text {
+	margin-top: 16px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.about-item__price {
+	margin-top: 16px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 25px;
+	letter-spacing: 0em;
+}
+
+.color-text {
+	margin-top: 30px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 23px;
+	letter-spacing: 0em;
+}
+
+.about-item__color {
+	display: flex;
+}
+
+.color__item {
+	margin-top: 16px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+.about-item__manual {
+	display: flex;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+}
+
+.about-item__manual img {
+	margin-left: 10px;
+}
+
+.about-item__buy {
+	display: flex;
+	align-items: center;
+	margin-top: 33px;
+}
+
+.buy__item {
+	padding: 12px 169px;
+	background: #F2A6B6;
+	border: 1px solid #A06593;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 25px;
+	letter-spacing: 0em;
+}
+
+.busket__item,
+.link__item {
+	margin-left: 30px;
+}
+
+.about-item__characters {
+	display: flex;
+	text-align: left;
+	margin-top: 50px;
+}
+
+.characters-name p,
+.characters-data p{
+	margin-bottom: 27px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: 0em;
+}
+.characters-data p{
+	font-weight: 400;
+}
+.characters-name p:last-child,
+.characters-data p:last-child {
+    margin-bottom: 0;
+}
+
+.description-item__container {
+	padding: 150px 150px;
+}
+.desctiption-item__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+.description-item__title {
+	margin-bottom: 30px;
+}
+
+.description-item__text {
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+
+
+.elem-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding: 30px 0;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.faq__elem:first-child{
+	border-top: 1px solid #D8D8D8;
+}
+
+.elem-top p{
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+}
+
+.elem-bot {
+	display: none;
+}
+.active_text{
+	display: block;
+}
+.arrow_rotate {
+	transform: rotate(90deg);
+	transition: .5s;
 }
