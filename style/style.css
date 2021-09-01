@@ -1346,3 +1346,76 @@
 	transform: rotate(90deg);
 	transition: .5s;
 }
+
+
+/*busket*/
+
+.product {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.product__head th {
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: 0em;
+	padding-bottom: 30px;
+}
+.product__head th:first-child {
+	text-align: left;
+	width: 13%;
+}
+
+.product__body td {
+	text-align: center;
+}
+
+.product__item td:nth-child(2) {
+	text-align: left;
+}
+
+.product__title img{
+	width: 150px;
+	height: 150px;
+}
+a.remove img {
+    margin: 0 auto;
+}
+.product__body tr{
+	border: none;
+  	border-top: 1px solid #D8D8D8;;
+  	border-bottom: 1px solid #D8D8D8;;
+}
+
+.product__name h2 {
+	font-family: Playfair Display;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+.product__size-color p,
+.product__count p,
+.product__price p,
+.product__summ p,
+.product__name p {
+	margin-top:  18px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+.product__summ p{
+	font-weight: 600;
+}
+
+.bucket__container {
+	padding: 50px 0;
+}
