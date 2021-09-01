@@ -1399,12 +1399,14 @@ a.remove img {
 	line-height: 30px;
 	letter-spacing: 0em;
 }
+.product__name p {
+	margin-top: 18px;
+}
 .product__size-color p,
 .product__count p,
 .product__price p,
 .product__summ p,
 .product__name p {
-	margin-top:  18px;
 	font-family: Montserrat;
 	font-size: 20px;
 	font-style: normal;
