@@ -112,7 +112,7 @@
 							</div>
 						</div>
 						<div class="about-item__specification">
-							<div class="about-item__description">
+							<div class="about-item__description js-product" data-product-name="Millenia Колье" data-product-desc="Кубический Цирконий Swarovski, Белый" data-product-price="40000" data-product-color="" data-product-size="50" data-product-articul="5552658" data-product-img="/images/photo1.jpg">
 								<p class="about-item__header">Новинки</p>
 								<h3 class="about-item__name">Millenia Колье</h3>
 								<p class="about-item__text">Кубический Цирконий Swarovski, Белый</p>
@@ -127,7 +127,7 @@
 									</div>
 									<a href="#" class="about-item__manual">Справочник размеров <img src="images/leftright.svg" alt=""></a>
 									<div class="about-item__buy">
-										<a href="#" class="buy__item">Купить</a>
+										<button class="buy__product buy js-buy">Купить</button>
 										<a href="#" class="busket__item"><img src="images/busket.svg" alt=""></a>
 										<a href="" class="link__item"><img src="images/link.svg" alt=""></a>
 									</div>
@@ -163,7 +163,7 @@
 						<div class="description-item__title title__cards">
 							Millenia Колье
 						</div>
-						<div class="description-item__text">
+						<div class="description-item__text js-cart">
 							Этот кулон имеет эффектную форму восьмиугольника и станет одним из самых часто надеваемых украшений в вашей коллекции. К изящной цепочке с родиевым покрытием прикреплён центральный элемент — прозрачный камень ступенчатой огранки, который движется, отвечая на каждое ваше движение, в обрамлении более мелких камней огранки «бриллиант». Изделие абсолютно универсально. Его можно носить и с белой футболкой, создавая утончённые образы, и сочетать с другими ожерельями и колье, делая свой стиль более эффектным. Это колье принадлежит к семейству Millenia и создано креативным директором Джованной Энгельберт для Collection I.
 						</div>
 					</div>
@@ -340,24 +340,6 @@
 			</div>
 		</div>
 	</footer>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script src="scripts/script.js"></script>
-	<script>
-		$('#slider1').slick({
-			autoplay:true,
-			infinite: true,
-			dots: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						dots: false,
-					}
-				}]
-		}); 
-	</script>
 </body>
 </html>
