@@ -36,9 +36,8 @@
 	    display: flex;
 	    align-items: center;
 	}
-	.slider__logo img{
-		width: 50%;
-		margin: 0 auto;
+	.slider__logo {
+		font-size: 60px;
 	}
 	.slider__text{
 		font-size: 30px;
@@ -275,10 +274,19 @@
 		margin: 0;
 	}
 	.header__store {
+		display: flex;
+	}
+	.header__search {
 		display: none;
 	}
-	.slider__logo img {
-		margin: 0;
+	.header__basket {
+		margin-left: 20px;
+	}
+	.slider__logo {
+		font-size: 40px;
+	}
+	.slick-dots {
+    	bottom: 20px;
 	}
 	.slider__container {
 		align-items: flex-start;
