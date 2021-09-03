@@ -113,14 +113,21 @@
 	position: relative;
 }
 
+.slider__logo,
 .slider__text{
 	margin-top: 40px;
+	margin-lefT: 150px;
 	font-family: Playfair Display;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 61.2941px;
 	line-height: 58px;
 	color: #353A4B;
+	text-transform: uppercase;
+}
+
+.slider__logo {
+    font-size: 90px;
 }
 
 .slider__swarowski{
@@ -1372,17 +1379,18 @@
 
 .product__body td {
 	text-align: center;
+	padding: 30px 0;
 }
 
-.product__item td:nth-child(2) {
+/*.product__name h2, p{
 	text-align: left;
-}
+}*/
 
 .product__title img{
 	width: 150px;
 	height: 150px;
 }
-a.remove img {
+.remove img {
     margin: 0 auto;
 }
 .product__body tr{
@@ -1398,9 +1406,11 @@ a.remove img {
 	font-weight: 400;
 	line-height: 30px;
 	letter-spacing: 0em;
+	text-align: left;
 }
 .product__name p {
 	margin-top: 18px;
+	text-align: left;
 }
 .product__size-color p,
 .product__count p,
