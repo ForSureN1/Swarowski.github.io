@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="style/media.css">
 </head>
 <body>
-	<header class="header">
+<header class="header">
 			<div class="header__top">
 				<div class="container">
 				<div class="top__container">				
@@ -24,10 +24,16 @@
 							<svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M9.995 0C4.47 0 0 4.475 0 10C0 15.525 4.47 20 9.995 20C15.52 20 20 15.525 20 10C20 4.475 15.52 0 9.995 0ZM16.92 6H13.97C13.645 4.75 13.19 3.55 12.59 2.44C14.43 3.07 15.96 4.345 16.92 6ZM10 2.035C10.835 3.235 11.485 4.57 11.91 6H8.09C8.515 4.57 9.165 3.235 10 2.035ZM2.26 12C2.095 11.36 2 10.69 2 10C2 9.31 2.095 8.64 2.26 8H5.635C5.555 8.655 5.5 9.32 5.5 10C5.5 10.68 5.555 11.345 5.64 12H2.26ZM3.075 14H6.025C6.35 15.25 6.805 16.45 7.405 17.565C5.565 16.935 4.035 15.655 3.075 14ZM6.025 6H3.075C4.035 4.345 5.565 3.065 7.405 2.435C6.805 3.55 6.35 4.75 6.025 6ZM10 17.965C9.17 16.765 8.52 15.43 8.09 14H11.91C11.48 15.43 10.83 16.765 10 17.965ZM12.34 12H7.66C7.565 11.345 7.5 10.68 7.5 10C7.5 9.32 7.565 8.655 7.66 8H12.34C12.435 8.655 12.5 9.32 12.5 10C12.5 10.68 12.435 11.345 12.34 12ZM12.595 17.56C13.195 16.445 13.65 15.25 13.975 14H16.925C15.96 15.655 14.43 16.93 12.595 17.56ZM14.36 12C14.44 11.345 14.5 10.68 14.5 10C14.5 9.32 14.445 8.655 14.36 8H17.735C17.9 8.64 18 9.31 18 10C18 10.69 17.905 11.36 17.735 12H14.36Z" fill="#353A4B"/>
 							</svg> 
-							<p>Рус</p>
-							<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0.69001 12.6769C1.02669 13.0135 1.57401 13.0135 1.91069 12.6769L7.50993 7.07761C7.67914 6.90841 7.76374 6.68568 7.76201 6.46468C7.76201 6.24196 7.67914 6.02096 7.50993 5.85175L1.91069 0.25251C1.57401 -0.0841699 1.02669 -0.0841699 0.69001 0.25251C0.35333 0.589189 0.35333 1.13651 0.69001 1.47319L5.6815 6.46468L0.69001 11.4562C0.35333 11.7929 0.35333 12.3402 0.69001 12.6769Z" fill="#353A4B"/>
-							</svg>
+							<div class="header_text lang_block">
+				            	<div class="lang_choice">
+				                	<div>Рус</div>
+				            	</div>
+				            	<div class="other_lang">
+				                	<a href="" class="active-lang">Рус</a>
+				                	<a href="" class="">Қаз</a>
+				                	<a href="" class="">Eng</a>
+				            	</div>
+				        	</div>
 						</div>
 						<div class="header__phone">
 							<a href="tel:+7 705 782 60 77" class="displayflex">
@@ -39,7 +45,7 @@
 						</div>
 					</div>
 					<div class="header__logo">
-						<img src="images/logo.png" alt="">
+						<a href="#"><span>SWNURSULTAN | SWAROVSKI</span></a>
 					</div>
 					<div class="header__store displayflex">
 						<form action="">
@@ -51,7 +57,7 @@
 							</a>
 						</form>
 						<div class="header__basket">
-							<a href="#">
+							<a href="busket.html">
 								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 16C4.895 16 4.01 16.895 4.01 18C4.01 19.105 4.895 20 6 20C7.105 20 8 19.105 8 18C8 16.895 7.105 16 6 16ZM0 0V2H2L5.595 9.585L4.245 12.035C4.09 12.325 4 12.65 4 13C4 14.105 4.895 15 6 15H18V13H6.425C6.285 13 6.175 12.89 6.175 12.75C6.175 12.705 6.185 12.665 6.205 12.63L7.1 11H14.55C15.3 11 15.955 10.585 16.3 9.97L19.875 3.48C19.955 3.34 20 3.175 20 3C20 2.445 19.55 2 19 2H4.215L3.265 0H0ZM16 16C14.895 16 14.01 16.895 14.01 18C14.01 19.105 14.895 20 16 20C17.105 20 18 19.105 18 18C18 16.895 17.105 16 16 16Z" fill="#353A4B"/>
 								</svg>
@@ -110,34 +116,36 @@
 					</div>
 				</div>
 				<div class="clock__items blockflex">
-					<div class="clock__item card__flex js-product" data-product-name="Часы" data-product-desc="NEW Twist necklace White" data-product-price="23000" data-product-color="Серебрянная" data-product-size="" data-product-articul="5478610246" data-product-img="images/clock2.jpg">
+					<div class="clock__item card__flex js-product" data-product-name="Часы" data-product-desc="NEW Twist necklace White" data-product-price="23000"  data-product-size="50" data-product-articul="5478610246" data-product-img="images/clock2.jpg" data-product-color="">
 						  <a href="#"><img src="images/clock2.jpg" alt=""></a>
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex">
 						  	<p>27,000 тг</p>
-						  	<button class="buy js-buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
-					<div class="clock__item card__flex">
+					<div class="clock__item card__flex js-product" data-product-name="Часы" data-product-desc="NEW Twist necklace White" data-product-price="23000"  data-product-size="50" data-product-articul="5478610248" data-product-img="images/clock2.jpg" data-product-color="">
 						  <a href="#"><img src="images/clock1.png" alt=""></a>
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex">
 						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
-					<div class="clock__item card__flex">
+					<div class="clock__item card__flex js-product" data-product-name="Часы" data-product-desc="NEW Twist necklace White" data-product-price="23000"  data-product-size="50" data-product-articul="5478610249" data-product-img="images/clock2.jpg" data-product-color="">
 						  <a href="#"><img src="images/clock1.png" alt=""></a>
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex ">
 						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
+						  </div>
+					</div>
+					<div class="clock__item card__flex js-product" data-product-name="Часы" data-product-desc="NEW Twist necklace White" data-product-price="23000"  data-product-size="50" data-product-articul="5478610250" data-product-img="images/clock2.jpg" data-product-color="">
+						  <a href="#"><img src="images/clock1.png" alt=""></a>
+						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
+						  <div class="clock__price displayflex">
+						  	<p>27,000 тг</p>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
 					<div class="clock__item card__flex">
@@ -145,9 +153,7 @@
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex">
 						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
 					<div class="clock__item card__flex">
@@ -155,9 +161,7 @@
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex">
 						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
 					<div class="clock__item card__flex">
@@ -165,9 +169,7 @@
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex">
 						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
 					<div class="clock__item card__flex">
@@ -175,19 +177,7 @@
 						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
 						  <div class="clock__price displayflex">
 						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
-						  </div>
-					</div>
-					<div class="clock__item card__flex">
-						  <a href="#"><img src="images/clock1.png" alt=""></a>
-						  <div class="clock__desc">NEW Twist necklace White, Rose gold-tone plated</div>
-						  <div class="clock__price displayflex">
-						  	<p>27,000 тг</p>
-						  	<button class="buy"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.75 10.25H15.25V6.5H19V4H15.25V0.25H12.75V4H9V6.5H12.75V10.25ZM7.75 21.5C6.36875 21.5 5.2625 22.6187 5.2625 24C5.2625 25.3813 6.36875 26.5 7.75 26.5C9.13125 26.5 10.25 25.3813 10.25 24C10.25 22.6187 9.13125 21.5 7.75 21.5ZM20.25 21.5C18.8687 21.5 17.7625 22.6187 17.7625 24C17.7625 25.3813 18.8687 26.5 20.25 26.5C21.6313 26.5 22.75 25.3813 22.75 24C22.75 22.6187 21.6313 21.5 20.25 21.5ZM7.96875 17.4375C7.96875 17.3813 7.98125 17.3312 8.00625 17.2875L9.13125 15.25H18.4438C19.3813 15.25 20.2 14.7313 20.6313 13.9625L25.4563 5.2L23.2688 4H23.2625L21.8813 6.5L18.4375 12.75H9.66875L9.50625 12.4125L6.7 6.5L5.5125 4L4.33125 1.5H0.25V4H2.75L7.25 13.4812L5.55625 16.5438C5.3625 16.9062 5.25 17.3125 5.25 17.75C5.25 19.1313 6.36875 20.25 7.75 20.25H22.75V17.75H8.28125C8.10625 17.75 7.96875 17.6125 7.96875 17.4375Z" fill="#A06593"/>
-								</svg></button>
+						  	<button class="buy js-buy"></button>
 						  </div>
 					</div>
 				</div>
