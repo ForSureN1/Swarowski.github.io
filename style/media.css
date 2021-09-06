@@ -32,6 +32,9 @@
 	.slider__swarowski{
     	padding-top: 150px;
   	}
+  	.slick-dots {
+    	bottom: 25px;
+	}
 	.top__container {
     	display: flex;
     	justify-content: space-between;
@@ -245,8 +248,29 @@
 		font-size: 14px;
 	}
 	.slider__swarowski{
-    	padding-top: 100px;
+    	padding-top: 150px;
   	}
+  	.slider__logo {
+  		font-size: 60px;
+  	}
+  	.slider__logo, .slider__text{
+  		margin-top: 0;
+  		margin-left: 50px;
+  	}
+  	.slick-dots {
+		display: none;
+	}
+	.slider__text {
+		font-size: 28px;
+		margin-top: 5px;
+		line-height: 20px;
+	}
+	.slick-dots {
+    	bottom: 20px;
+	}
+	.slider__container {
+		align-items: flex-start;
+	}
 	.menu__items {
 		display: none;
 	}
@@ -257,9 +281,12 @@
 	.bot__container {
 		padding: 10px 0;
 	}
+	.header__bot {
+		position: relative;
+	}
 	.menu__items{
 		position: absolute;
-		top: 100%;
+		top: -18px;
 		left: 0;
 		width: 100%;
 		text-align: center;
@@ -300,31 +327,11 @@
 	.header__basket {
 		margin-left: 20px;
 	}
-	.slider__logo {
-		font-size: 40px;
-	}
-	.slick-dots {
-    	bottom: 20px;
-	}
-	.slider__container {
-		align-items: flex-start;
-	}
-
 	.accessories__right-top {
 		margin-right: 20px;
 		margin-left: 20px;
 	}
-	.slick-dots {
-		display: none;
-	}
-	.slider__logo img {
-		width: 20%;
-	}
-	.slider__text {
-		font-size: 20px;
-		margin-top: 5px;
-		line-height: 20px;
-	}
+
 	.conctacts__title::before,.feedback__title::before,.new-collection__title::before, .view-all__link::before, .jewerly__title::before, .sale__title::before, .clock__title::before, .accessories__title::before, .decorations__title::before, .home__title::before, .video__title::before {
 		font-size: 40px;
 	}
@@ -425,7 +432,13 @@
 }
 @media(max-width: 776px) {
 	.header__logo {
-		white-space: unset;
+		display: none;
+	}
+	.slider__logo {
+		font-size: 40px;
+	}
+	.slider__text {
+		font-size: 20px;
 	}
 	.header__phone p {
 		display: none;
@@ -447,8 +460,15 @@
 	}
 }
 @media(max-width: 576px) {
-		.header__logo {
-			font-size: 14px;
+		.slider__logo {
+			font-size: 28px;
+			margin: 0;
+		}
+		.slider__text {
+			margin: 0;
+		}
+		.slider__swarowski {
+			padding-top: 115px;
 		}
 		.card__flex {
 			width: 100%;
