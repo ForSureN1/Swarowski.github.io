@@ -8,9 +8,9 @@
     	justify-content: space-around;
     	margin-top: 40px;
 	}
-	.accessories__left {
+	/*.accessories__left {
 	    margin: 0 auto;
-	}
+	}*/
 	.accessories__right {
 		width: 100%;
 	}
@@ -20,9 +20,15 @@
 		/*max-width: 1000px;*/
 		margin: 0 auto;
 	}
+	.header__logo {
+		font-size: 20px;
+	}
 	.dispnone {
 		display: none;
 	}
+	/*.card__flex {
+		width: 33%;
+	}*/
 	.slider__swarowski{
     	padding-top: 150px;
   	}
@@ -222,6 +228,18 @@
 	.container {
 		max-width: 900px;
 	}
+	.card__flex{
+		width: 32%;
+	}
+	.card__flex {
+		margin-right: 2%;
+	}
+	.card__flex:nth-child(4n) {
+    margin-right: 2%;
+	}
+	.card__flex:nth-child(3n) {
+    margin-right: 0;
+	}
 	.header__phone p,
 	.header__language p {
 		font-size: 14px;
@@ -313,46 +331,48 @@
 	.title__cards {
 		font-size: 30px;
 	}
-	.new-collection__items,
-	.jewerly__items,
-	.sale__items,
-	.clock__items,
-	.decorations__items,
-	.home__items {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		grid-gap: 10px;
-	}
+
 	.footer__logo {
     	width: 70%;
     	margin: 0 auto;
 	}
+	.footer__logo {
+		margin-bottom: 20px;
+	}
+	.menu__items-footer {
+		display: block;
+		text-align: center;
+		margin-top: 60px;
+	}
+	.item-foot{
+		color: #353A4B;
+	}
 	.copyright {
 		font-size: 14px;
 	}
-	.new-collection__item img {
-		height: 152px;
-		width: 152px;
+	/*.new-collection__item img {
+		width: 100%;
+		height: auto;
 	}
 	.jewerly__item img {
-		height: 202px;
-		width: 202px;
+		width: 100%;
+		height: auto;
 	}
 	.sale__item img {
-		height: 202px;
-		width: 202px;
+		width: 100%;
+		height: 264px;
 	}
-	.clock__item > img {
-		height: 152px;
-		width: 152px;
+	.clock__item img {
+		width: 100%;
+		height: 286px;
 	}
 	.home__item img {
-		height: 152px;
-		width: 152px;
+		height: auto;
 	}
 	.decoration__item img {
-    	width: 423px;
-    	height: 120px;
-	}
+    	width: 100%;
+    	height: auto;
+	}*/
 	.contacts__info {
 		flex-direction: column;
 		align-items: flex-start;
@@ -403,7 +423,36 @@
 		width: 100%;
 	}
 }
+@media(max-width: 776px) {
+	.header__logo {
+		white-space: unset;
+	}
+	.header__phone p {
+		display: none;
+	}
+	.header__phone {
+		margin-left: 10px;
+	}
+	.card__flex {
+		width: 49%;
+	}
+	.card__flex {
+		margin-right: 0;
+	}
+	.card__flex:nth-child(4n) {
+		margin-right: 0;
+	}
+	.blockflex {
+		justify-content: space-between;
+	}
+}
 @media(max-width: 576px) {
+		.header__logo {
+			font-size: 14px;
+		}
+		.card__flex {
+			width: 100%;
+		}
 		.top__container {
 			padding: 10px 0;
 		}
