@@ -31,23 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  //Установка цвета
-
-  function setColor() {
-    const colors = document.querySelectorAll('.color__item')
-    const jsproduct = document.querySelector('.js-product')
-    console.log(colors)
-    // const colorAttr = document.getAttribute('data-product-color')
-    for(let i = 0; i < colors.length; i++) {
-      colors[i].addEventListener('click', () => {
-        jsproduct.setAttribute('data-product-color', colors[i].getAttribute('data-product-color'));
-      })
-    }
-
-  }
-
-  setColor();
-
 	//busket
 
 	//Вызов функции товара
@@ -204,6 +187,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cartInit();
   }
+    //Установка цвета
+
+  function setColor() {
+    const colors = document.querySelectorAll('.color__item')
+    const jsproduct = document.querySelector('.js-product')
+    // const colorAttr = document.getAttribute('data-product-color')
+    for(let i = 0; i < colors.length; i++) {
+      colors[i].addEventListener('click', () => {
+        jsproduct.setAttribute('data-product-color', colors[i].getAttribute('data-product-color'));
+      })
+    }
+
+  }
+
+  setColor();
 
   requestCart();
 
