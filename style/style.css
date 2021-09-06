@@ -19,6 +19,50 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.lang_block {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+
+.lang_choice,
+.other_lang a {
+	font-size: 20px;
+	padding: 2px;
+}
+.other_lang {
+	color: #fff;
+    background-color: #03A6E7;
+    text-align: center;
+}
+.lang_choice {
+	padding-right: 15px;
+	background: url(../images/langchoice.svg) right center / 8px no-repeat;
+}
+
+.header_text {
+	position: relative;
+}
+.other_lang {
+	top: 0;
+	left: 0;
+  	position: absolute;
+  	visibility: hidden;
+  	opacity: 0;
+  	transition: 0.6s;
+  	transform: translate(0, 35%);  
+  	border-bottom-right-radius: 10px;
+  	border-bottom-left-radius: 10px;
+}
+.active {
+	visibility: visible;
+  	opacity: 1;
+  	transform: translate(0, 35%); 
+}
+.active-lang {
+	background-color: #fff;
+	color: #03A6E7;
+}
 .select-language {
 	border: none;
 	cursor: pointer;
@@ -87,8 +131,8 @@
   	transition: 0.3s text-shadow;
 }
 .slider__swarowski{
-    	padding-top: 220px;
-  	}
+    padding-top: 240px;
+}
 .slider__swarowski{
 	width: auto;
 }
@@ -299,6 +343,10 @@
 .buy{
 	border: none;
 	cursor: pointer;
+	background: url('../images/busket.svg') center no-repeat;
+	background-size: 24px;
+	width: 24px;
+	height: 24px;
 }
 
 .view-all{
@@ -467,6 +515,7 @@
 
 .clock__item  img {
 	height: 286px;
+	object-fit: contain;
 }
 
 .clock__desc{
@@ -1226,6 +1275,11 @@
 	line-height: 25px;
 }
 
+.color__item {
+	cursor: pointer;
+	border: none;
+}
+
 .about-item__price {
 	margin-top: 16px;
 	font-family: Montserrat;
@@ -1286,6 +1340,7 @@
 	font-weight: 500;
 	line-height: 25px;
 	letter-spacing: 0em;
+	cursor: pointer;
 }
 
 .busket__item,
@@ -1411,6 +1466,14 @@
 	width: 150px;
 	height: 150px;
 }
+.remove {
+	background: url('../images/remove.svg') no-repeat center;
+	width: 24px;
+	height: 24px;
+	background-size: 24px;
+	border: none;
+	cursor: pointer;
+}
 .remove img {
     margin: 0 auto;
 }
@@ -1484,4 +1547,30 @@
 .count__product span:nth-child(2) {
 	color: #5A5E6B;
 	font-weight: 400;
+}
+
+.count-items {
+	display: flex;
+	justify-content: center;
+}
+.js-plus {
+	background: url(../images/plus.png) no-repeat center;
+	margin-right: 10px;
+}
+
+.js-minus {
+	background: url(../images/minus.png) no-repeat center;
+	margin-left: 10px;
+}
+
+.js-minus,
+.js-plus {
+/*	width: 100px;
+	height: 100px;*/
+/*	background-size: 100px;*/
+	width: 26px;
+	height: 26px;
+	border: none;
+	cursor: pointer;
+	background-size: 26px;
 }
