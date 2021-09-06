@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => { 
+document.addEventListener('DOMContentLoaded', () => { 
 	
 	// Burger menu
 	const burger = document.querySelector('.burger');
@@ -21,18 +21,47 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	
+  // language
+
+  let lang = document.querySelector('.lang_choice');
+  let other = document.querySelector('.other_lang')
+  lang.addEventListener('click', selectLanguage);
+  function selectLanguage() {
+    other.classList.toggle('active');
+  }
+
+
+  //Установка цвета
+
+  function setColor() {
+    const colors = document.querySelectorAll('.color__item')
+    const jsproduct = document.querySelector('.js-product')
+    console.log(colors)
+    // const colorAttr = document.getAttribute('data-product-color')
+    for(let i = 0; i < colors.length; i++) {
+      colors[i].addEventListener('click', () => {
+        jsproduct.setAttribute('data-product-color', colors[i].getAttribute('data-product-color'));
+      })
+    }
+
+  }
+
+  setColor();
+
 	//busket
 
 	//Вызов функции товара
 	function requestCart() {
     const cartDOMElement = document.querySelector('.js-cart')
+    const cartItemsCounterDOMElement = document.querySelector('.js-cart-total-count-items')
+    const cartTotalPriceDOMElement = document.querySelector('.js-cart-total-price')
+    const cartTotalSummaDOMElement = document.querySelector('.js-cart-total-summa')
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
 
 
     //отображаем добавленный товар в корзине
-    const renderCartItem = ({articul, name, desc, color, size, price,totalprice, src, quantity}) => {
+    const renderCartItem = ({articul, name, desc, color, size, price, totalprice, src, quantity}) => {
       const cartItemDOMElement = document.createElement('tr');
-
       const cartItemTemplate = `
         <tr class="product__item">
           <td class="product__title">
@@ -44,26 +73,32 @@ document.addEventListener("DOMContentLoaded", () => {
           </td>
           <td class="product__size-color">
             <p>${size}</p>
-            <p>${color}</p>
+            <p><img src="${color}"></p>
           </td>
           <td class="product__count">
-            <p>${quantity}</p>
+            <div class="count-items">
+              <button class="js-plus"></button>
+              <p>${quantity}</p>
+              <button class="js-minus"></button>
+            </div>
           </td>
           <td class="product__price">
-            <p>${price}</p>
+            <p>${price} тг</p>
           </td>
           <td class="product__summ">
-            <p>${totalprice}</p>
+            <p>${totalprice} тг</p>
           </td>
           <td class="product__remove">
-            <button class="remove buy"><img src="images/remove.svg" alt=""></button>
+            <button class="remove"></button>
           </td>
         </tr>
       `;
+
       cartItemDOMElement.innerHTML = cartItemTemplate;
       cartItemDOMElement.setAttribute('data-product-articul', articul);
       cartItemDOMElement.classList.add('js-cart-item');
       cartDOMElement.appendChild(cartItemDOMElement);
+      totalBusket();
     }
 
 
@@ -72,10 +107,31 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem('cart', JSON.stringify(cart));
     }
 
+
+    //подсчитываение колличества и суммы товара
+    const totalBusket = () => {
+      let summ_array = document.querySelectorAll('.product__summ');
+      let totalprice = 0;
+      let totalcount = 0;
+      const ids = Object.keys(cart);
+      console.log(ids)
+      for (let i = 0; i < ids.length; i++) {
+        const id = ids[i]
+        totalprice += +(cart[id].price);
+        totalcount += +(cart[id].quantity);
+      }
+
+
+      cartTotalPriceDOMElement.textContent = totalprice + ' тг';
+      cartTotalSummaDOMElement.textContent = totalprice + ' тг';
+      cartItemsCounterDOMElement.textContent = totalcount + 'х';
+    }
+
     //Обновляем данные в LocalStorage
     const updateCart = () => {
       console.log(cart);
       saveCart();
+      // updateCartTotalPrice();
     }
 
 
@@ -86,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
       delete cart[articul];
       updateCart();
       console.log(cartItemDOMElement)
+      totalBusket();
     }
 
     //Добавление в корзину
@@ -149,7 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   requestCart();
-
 
 
  });
