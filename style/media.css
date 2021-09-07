@@ -231,6 +231,13 @@
 	.container {
 		max-width: 900px;
 	}
+	.header__logo {
+		display: none;
+	}
+	.header__search {
+		display: inline;
+		width: 89%;
+	}
 	.card__flex{
 		width: 32%;
 	}
@@ -318,12 +325,7 @@
 	.accessories__left {
 		margin: 0;
 	}
-	.header__store {
-		display: flex;
-	}
-	.header__search {
-		display: none;
-	}
+
 	.header__basket {
 		margin-left: 20px;
 	}
