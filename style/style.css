@@ -428,6 +428,10 @@
 	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
 	transition: .2s;
 }
+.categories__item:hover{
+	box-shadow: 7px 7px 10px 4px rgba(34, 60, 80, 0.18);
+	transition: .2s;
+}
 
 .sale__title{
 	position: relative;
@@ -517,9 +521,10 @@
 }
 
 .categories__item  img {
-	height: 286px;
+	height: 390px;
 	object-fit: contain;
 }
+
 
 .categories__desc{
 	padding: 30px 0;
