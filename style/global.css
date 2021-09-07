@@ -83,7 +83,10 @@ select {
 }
 .categoriespage {
   background: url('../images/background.png') no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
+
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
