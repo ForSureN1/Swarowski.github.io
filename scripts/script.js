@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td class="product__count">
             <div class="count-items">
               <button class="js-plus"></button>
-              <p>${quantity}</p>
+              <p class="js-cart-item-quantity">${quantity}</p>
               <button class="js-minus"></button>
             </div>
           </td>
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${price} тг</p>
           </td>
           <td class="product__summ">
-            <p>${totalprice} тг</p>
+            <p class="js-cart-item-totalprice">${totalprice} тг</p>
           </td>
           <td class="product__remove">
             <button class="remove"></button>
@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cartItemDOMElement.classList.add('js-cart-item');
       cartDOMElement.appendChild(cartItemDOMElement);
       totalBusket();
+      updateCart();
     }
 
 
@@ -93,26 +94,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //подсчитываение колличества и суммы товара
     const totalBusket = () => {
-      let summ_array = document.querySelectorAll('.product__summ');
-      let totalprice = 0;
+      let summ_array = document.querySelectorAll('.js-cart-item-totalprice');
+      // let totalprice = document.querySelectorAll('.js-cart-item-totalprice');
       let totalcount = 0;
       const ids = Object.keys(cart);
-      console.log(ids)
+      // console.log(ids)
       for (let i = 0; i < ids.length; i++) {
         const id = ids[i]
-        totalprice += +(cart[id].price);
+        // totalprice += +(cart[id].totalprice);
         totalcount += +(cart[id].quantity);
+        totalprice = +(totalcount) * +(cart[id].price);
       }
-
 
       cartTotalPriceDOMElement.textContent = totalprice + ' тг';
       cartTotalSummaDOMElement.textContent = totalprice + ' тг';
       cartItemsCounterDOMElement.textContent = totalcount + 'х';
+      if (ids.length == 0) {
+        cartTotalPriceDOMElement.textContent = 0;
+        cartTotalSummaDOMElement.textContent = 0;
+      }
+      updateCart();
     }
+
+
 
     //Обновляем данные в LocalStorage
     const updateCart = () => {
-      console.log(cart);
+      // console.log(cart);
       saveCart();
       // updateCartTotalPrice();
     }
@@ -124,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
       cartDOMElement.removeChild(cartItemDOMElement);
       delete cart[articul];
       updateCart();
-      console.log(cartItemDOMElement)
       totalBusket();
     }
 
@@ -141,6 +148,36 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCartItem(data);
       }
     }
+
+    //Обновление количества товара и итоговой суммы
+    const updateQuantityTotalPrice = (articul, quantity) => {
+      const cartItemDOMElement = cartDOMElement.querySelector(`[data-product-articul="${articul}"`);
+      const cartItemQuantityDOMElement = cartItemDOMElement.querySelector('.js-cart-item-quantity');
+      const cartItemPriceDOMElement = cartItemDOMElement.querySelector('.js-cart-item-totalprice');
+      const ids = Object.keys(cart);
+      cart[articul].quantity = quantity;
+      cartItemQuantityDOMElement.textContent = quantity;
+      cart[articul].totalprice = cart[articul].quantity * cart[articul].price;
+      cartItemPriceDOMElement.textContent = cart[articul].totalprice + ' тг';
+      updateCart();
+    }
+
+    //Увеличение количества товара и итоговой суммы
+    const increaseQuantity = (articul) => {
+      const newQuantity = cart[articul].quantity + 1;
+      updateQuantityTotalPrice(articul, newQuantity);
+    }
+
+    //Уменьшение количества товара и итоговой суммы
+    const decreaseQuantity = (articul) => {
+      const newQuantity = cart[articul].quantity - 1;
+      if (newQuantity >= 1) {
+        updateQuantityTotalPrice(articul, newQuantity);
+      }
+    }
+
+
+
 
     //Получаем данные для объекта
     const getProductData = (productDOMElement) => {
@@ -162,6 +199,35 @@ document.addEventListener('DOMContentLoaded', () => {
     	ids.forEach((articul) => renderCartItem(cart[articul]));
     };
 
+    //Отображаем на товаре добавлен ли он в корзину
+    // const disabledButton = () => {
+    //   const ids = Object.keys(cart);
+    //   const button = document.querySelectorAll('.js-buy');
+      
+    // }
+
+    // disabledButton();
+
+    const disabledButton = () => {
+        console.log(cart)
+        const test = document.querySelectorAll('.js-product')
+        console.log(parent)
+        if (cart.hasOwnProperty()){
+                  console.log('Найдено')
+        }
+        for(let i = 0; i < test.length; i++) {
+            const attr = (test[i].getAttribute('data-product-articul'))
+            const parent = test[i].querySelector('.js-buy')
+            console.log(parent)
+            console.log(cart.hasOwnProperty(attr))
+            if (cart.hasOwnProperty(attr)) {
+              parent.classList.add('disabled')
+            }
+        }
+
+    }
+    disabledButton();
+
 
     //Инициализация
     const cartInit = () => {
@@ -170,24 +236,52 @@ document.addEventListener('DOMContentLoaded', () => {
     	}
     	document.querySelector('body').addEventListener('click', (e) => {
     		const target = e.target;
+
+        //В корзину
     		if (target.classList.contains('js-buy')) {
     			e.preventDefault();
     			const productDOMElement = target.closest('.js-product');
     			const data = getProductData(productDOMElement);
     			addCartItem(data);
+          disabledButton();
     		}
+
+        //Удалить из корзины
     		if (target.classList.contains('remove')) {
     			e.preventDefault();
     			const cartItemDOMElement = target.closest('.js-cart-item');
     			const productArticul = cartItemDOMElement.getAttribute('data-product-articul');
     			deleteCartItem(productArticul);
     		}
+
+        //Увеличить
+        if (target.classList.contains('js-plus')) {
+          e.preventDefault();
+          const cartItemDOMElement = target.closest('.js-cart-item');
+          const productArticul = cartItemDOMElement.getAttribute('data-product-articul');
+          increaseQuantity(productArticul);
+          totalBusket();
+        }
+
+        //Уменьшить
+        if (target.classList.contains('js-minus')) {
+          e.preventDefault();
+          const cartItemDOMElement = target.closest('.js-cart-item');
+          const productArticul = cartItemDOMElement.getAttribute('data-product-articul');
+          decreaseQuantity(productArticul);
+          totalBusket();
+        }
+
+
     	});
 	}
 
     cartInit();
   }
-    //Установка цвета
+
+  requestCart();
+
+  //Установка цвета
 
   function setColor() {
     const colors = document.querySelectorAll('.color__item')
@@ -200,10 +294,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   }
-
+  
   setColor();
-
-  requestCart();
 
 
  });
