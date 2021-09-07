@@ -412,6 +412,9 @@
 .jewerly__item {
 	background: transparent;
 }
+.jewerly__item a:first-child{
+	background: #fff;
+}
 
 .jewerly__desc{
 	padding: 30px 25px 50px 25px;
@@ -525,7 +528,7 @@
 	padding: 0;
 }
 .categories__desc{
-	padding: 30px 0;
+	margin: 30px 0;
 	font-family: Playfair Display;
 	font-style: normal;
 	font-weight: 700;
@@ -1012,7 +1015,7 @@
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
-
+	align-items: center;
 	color: #353A4B;
 }
 
@@ -1021,6 +1024,8 @@
 }
 .sorting-select {
 	cursor: pointer;
+	background: none;
+	padding: 3px;
 }
 
 .page__items {
@@ -1120,6 +1125,9 @@
     display: flex;
     text-align: left;
 }
+.feedback__form p {
+	margin-bottom: 10px;
+}
 .feedback__name,
 .feedback__phone {
 	height: 59px;
@@ -1136,6 +1144,7 @@
 	border: 0.5px solid #949494;
 	box-sizing: border-box;
 	border-radius: 4px;
+	padding: 10px;
 }
 
 .feedback__commentary {
