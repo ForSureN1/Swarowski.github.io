@@ -344,9 +344,13 @@
 	border: none;
 	cursor: pointer;
 	background: url('../images/busket.svg') center no-repeat;
-	background-size: 24px;
-	width: 24px;
-	height: 24px;
+	background-size: 26px;
+	width: 26px;
+	height: 26px;
+}
+
+.disabled {
+	background: url('../images/complete.png') center no-repeat;
 }
 
 .view-all{
