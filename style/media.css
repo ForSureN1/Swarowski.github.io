@@ -18,6 +18,28 @@
 	.sorting {
 		padding: 0 0 30px 0;
 	}
+	.product__name h2 {
+		font-size: 28px;
+	}
+	.product__size-color p, .product__count p, .product__price p, .product__summ p, .product__name p {
+		font-size: 16px;
+	}
+	.path__here {
+		font-size: 16px;
+	}
+	.path__main,
+	.count__items {
+		font-size: 16px;
+	}
+	.title__cards {
+		font-size: 28px;
+	}
+	.product__head th {
+		font-size: 18px;
+	}
+	.title__cards span {
+		font-size: 50px;
+	}
 }
 
 
@@ -36,6 +58,10 @@
 	}*/
 	.accessories__right {
 		max-width: 100%;
+	}
+	.title__cards span {
+		font-size: 50px;
+    	bottom: 20%;	
 	}
 }
 @media (max-width: 1200px){
@@ -250,11 +276,8 @@
 	.product__head th {
 		padding-bottom: 10px;
 	}
-	.product__name h2 {
-		font-size: 28px;
-	}
-	.product__size-color p, .product__count p, .product__price p, .product__summ p, .product__name p {
-		font-size: 16px;
+	.product__name h2{
+		font-size: 20px;
 	}
 }
 
@@ -264,6 +287,9 @@
 	}
 	.top__container {
 		padding: 15px 0;
+	}
+	.path__container {
+		padding-top: 100px;
 	}
 	.header__info {
 		display: none;
@@ -471,6 +497,34 @@
 		display: flex;
 		flex-direction: column;
 	}
+	.product__head {
+		display: none;
+	}
+	.product__name h2,
+	.product__name p {
+		text-align: center;
+	}
+	.product__price {
+		display: none;
+	}
+	tbody.product__body.js-cart {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.product__body tr {
+		width: 33%;
+		justify-content: space-between;
+		padding: 5px;
+		border: 1px solid #D8D8D8;
+		margin: 1px;
+	}
+	td.product__size-color {
+		margin-top: auto;
+	}
+	.count__container {
+		padding-bottom: 50px;
+	}
 }
 @media(max-width: 776px) {
 	.header__logo {
@@ -508,6 +562,21 @@
 	}
 	.menu__item:nth-child(2) {
 		display: block;
+	}
+	.product__body tr {
+		width: 49%;
+	}
+	.input__phone,
+	.input__name {
+    	margin: 0 auto;
+    	width: 100%;
+	}
+	.input__phone {
+		margin-top: 15px;
+	}
+	.feedback__send {
+		padding: 15px 0;
+		width: 100%;
 	}
 }
 @media(max-width: 576px) {
@@ -588,7 +657,7 @@
 			padding: 20px 20px 10px 20px;
 		}
 		.path__container{
-			padding-top: 130px;
+			padding-top: 80px;
 			padding-bottom: 0;
 		}
 		.contacts__container {
@@ -616,5 +685,8 @@
 		}
 		.about-item__characters {
 			margin: 0;
+		}
+		.product__body tr {
+			width: 100%;
 		}
 	}
