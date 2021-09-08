@@ -1245,7 +1245,7 @@
 }
 
 .description-item__container {
-	padding: 150px 150px;
+	padding: 150px 0;
 }
 .desctiption-item__content {
 	display: flex;
