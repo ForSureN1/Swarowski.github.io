@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => { 
-	
+	$('#slider-internal').slick({
+      autoplay:true,
+      infinite: true,
+      dots: false,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            dots: false,
+          }
+        }]
+    }); 
 	// Burger menu
 	const burger = document.querySelector('.burger');
 	const menu = document.querySelector('.menu__items')
