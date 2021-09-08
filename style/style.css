@@ -14,6 +14,9 @@
 .header__top{
 	border-bottom: 1px solid rgba(53, 58, 75, 0.26);
 }
+.header__bot {
+	position: relative;
+}
 .displayflex{
 	display: flex;
 	justify-content: space-between;
@@ -57,7 +60,7 @@
   	border-bottom-right-radius: 10px;
   	border-bottom-left-radius: 10px;
 }
-.active {
+.other_lang.active {
 	visibility: visible;
   	opacity: 1;
   	transform: translate(0, 35%); 
@@ -509,14 +512,6 @@
     height: 100%;
     margin: 0 auto;
 }
-/*.accessories__right{
-	width: 49%;
-}*/
-
-/*.left__image img{
-	width: 683px;
-}*/
-
 .accessroies__eyes img {
 	width: 557px;
 	/*height: 289px;*/
@@ -550,7 +545,6 @@
 	max-height: 628px;
 }*/
 .accessories__right {
-	width: 59%;
 	margin-left: 30px;
 }
 
@@ -1064,6 +1058,22 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.big-images:first-child img{
+	order: 1;
+}
+.small-images:nth-child(1) img{
+	order: 2;
+}
+.small-images:nth-child(2) img{
+	order: 3;
+}
+.small-images:nth-child(3) img{
+	order: 4;
+}
+.small-images:nth-child(4) img{
+	order: 5;
+}
+
 .about-item__preview {
     width: 55%;
 }
@@ -1121,12 +1131,36 @@
 	font-size: 20px;
 	line-height: 25px;
 }
-
 .color__item {
+	width: 30px;
+	height: 30px;
+	background-color: #D6B95C;
+	border-radius: 60%;
+}
+.color__item,
+.size__item {
 	cursor: pointer;
 	border: none;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 23px;
+	letter-spacing: 0em;
+	padding: 0;
 }
 
+.color__item.active {
+	box-shadow: 0px 0px 10px 10px rgba(36, 1, 23, 0.46);
+}
+.size__item.active {
+	border-bottom: 1px solid #5A5E6B;
+	font-weight: 700;
+}
+
+.size__item {
+	margin-right: 15px;
+}
 .about-item__price {
 	margin-top: 16px;
 	font-family: Montserrat;
@@ -1150,7 +1184,9 @@
 .about-item__color {
 	display: flex;
 }
-
+.about-item__size {
+    margin: 10px 0;
+}
 .color__item {
 	margin-top: 16px;
 	margin-right: 20px;
@@ -1197,10 +1233,21 @@
 
 .about-item__characters {
 	display: flex;
+	flex-direction: column;
 	text-align: left;
 	margin-top: 50px;
 }
 
+.characters__row {
+	display: flex;
+	margin-top: 20px;
+}
+.characters-name {
+	width: 49%;
+}
+.characters-data {
+	width: 49%;
+}
 .characters-name p,
 .characters-data p{
 	margin-bottom: 27px;
@@ -1264,6 +1311,10 @@
 	font-weight: 400;
 	line-height: 24px;
 	letter-spacing: 0em;
+}
+
+.elem-top img{
+	margin: 0;
 }
 
 .elem-bot {
