@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
   // language
 
-  let lang = document.querySelector('.lang_choice');
+  let lang = document.querySelector('.lang_block');
   let other = document.querySelector('.other_lang')
   lang.addEventListener('click', selectLanguage);
   function selectLanguage() {
@@ -286,10 +286,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function setColor() {
     const colors = document.querySelectorAll('.color__item')
     const jsproduct = document.querySelector('.js-product')
-    // const colorAttr = document.getAttribute('data-product-color')
     for(let i = 0; i < colors.length; i++) {
       colors[i].addEventListener('click', () => {
         jsproduct.setAttribute('data-product-color', colors[i].getAttribute('data-product-color'));
+        // console.log(jsproduct.getAttribute('data-product-color'))
+        for (let j = 0; j < colors.length; j++) {
+          if (jsproduct.getAttribute('data-product-color') == colors[j].getAttribute('data-product-color')) {
+            colors[j].classList.add('active');
+          } else {
+            colors[j].classList.remove('active');
+          }
+        }
       })
     }
 
@@ -297,5 +304,24 @@ document.addEventListener('DOMContentLoaded', () => {
   
   setColor();
 
+  function setSize() {
+    const size = document.querySelectorAll('.size__item')
+    const jsproduct = document.querySelector('.js-product')
+    for(let i = 0; i < size.length; i++) {
+      size[i].addEventListener('click', () => {
+        jsproduct.setAttribute('data-product-size', size[i].getAttribute('data-product-size'));
+        for (let j = 0; j < size.length; j++) {
+          if (jsproduct.getAttribute('data-product-size') == size[j].getAttribute('data-product-size')) {
+            size[j].classList.add('active');
+          } else {
+            size[j].classList.remove('active');
+          }
+        }
+      })
+    }
+
+  }
+  
+  setSize();
 
  });
