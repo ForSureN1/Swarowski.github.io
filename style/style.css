@@ -38,12 +38,13 @@
 }
 .other_lang {
 	color: #fff;
-    background-color: #03A6E7;
+    background-color:#e2d9e0;
     text-align: center;
 }
 .lang_choice {
 	padding-right: 15px;
 	background: url(../images/langchoice.svg) right center / 8px no-repeat;
+	background-position-y: 13px;
 }
 
 .header_text {
@@ -56,19 +57,18 @@
   	visibility: hidden;
   	opacity: 0;
   	transition: 0.6s;
-  	transform: translate(0, 35%);  
-  	border-bottom-right-radius: 10px;
-  	border-bottom-left-radius: 10px;
+  	transform: translate(0, 35%);
 }
 .other_lang.active {
 	visibility: visible;
   	opacity: 1;
-  	transform: translate(0, 35%); 
+  	transform: translate(0, 35%);
+  	z-index: 10;
 }
 .active-lang {
-	background-color: #fff;
-	color: #03A6E7;
+	color: #a4a4a4;
 }
+
 .select-language {
 	border: none;
 	cursor: pointer;
@@ -367,21 +367,14 @@
 }
 
 .view-all__link{
-	position: relative;
 	text-align: center;
 }
-.view-all__link::before{
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 15px;
-	background-color: #FFF;
-	top: 25px;
-	left: 0;
-	transition: .8s;
+.view-all__link img {
+	width: 0;
+	transition: .5s;
 }
-.view-all__link:hover::before{
-	left: 150px;
+.view-all__link:hover img{
+	width: 100%;
 }
 .title__cards {
 	position: relative;
@@ -394,7 +387,7 @@
     font-family: Playfair Display;
     font-style: normal;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 70px;
     color: #B995B1;
     opacity: 0.15;
@@ -414,15 +407,7 @@
 }
 
 .jewerly__desc{
-	padding: 30px 25px 50px 25px;
-	font-family: Playfair Display;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 25px;
-	text-align: center;
-	letter-spacing: 0.04em;
-	color: #353A4B;
+	padding: 0 10px;
 }
 
 .jewerly__item:hover{
@@ -435,15 +420,7 @@
 }
 
 .sale__desc{
-	padding: 30px 60px;
-	text-align: center;
-	font-family: Playfair Display;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 25px;
-	letter-spacing: 0.04em;
-	color: #5A5E6B;
+	padding: 0 10px;
 }
 
 .sale__buy {
@@ -476,6 +453,7 @@
 .sale__item img{
     height: 264px;
     width: 264px;
+    object-fit: contain;
 }
 
 /*.sale__item {
@@ -632,7 +610,7 @@
 	width: 25px;
 	height: 25px;
 	position: absolute;
-	background-color: #fff;
+	background-color: #F8F4F7;
 	top: 0;
 	right: 38px;
     animation: moving 3s infinite linear;
