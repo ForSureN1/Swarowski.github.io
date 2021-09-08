@@ -122,37 +122,6 @@
 	.card{
 		padding: 30px 30px 15px 30px;
 	}
-	.new-collection__desc {
-		margin: 20px 0;
-		font-size: 16px;
-	}
-
-	.jewerly__title::before{
-		font-size: 55px;
-	}
-	.jewerly__desc{
-		padding: 20px 40px;
-		font-size: 16px;
-	}
-
-	.sale__title::before{
-		font-size: 55px;
-	}
-	.sale__desc{
-		font-size: 16px;
-		padding: 20px 40px;
-	}
-
-	.clock__title::before{
-		font-size: 55px;
-	}
-	.clock__desc{
-		font-size: 16px;
-		padding: 20px 0;
-	}
-	.accessories__title::before{
-		font-size: 55px;
-	}
 	.accessories__items {
 		flex-direction: column;
 	}
