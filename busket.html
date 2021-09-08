@@ -16,6 +16,7 @@
 </head>
 <body>
 <header class="header">
+		<div class="header__wrapper">
 			<div class="header__top">
 				<div class="container">
 				<div class="top__container">				
@@ -48,7 +49,7 @@
 						<a href="#"><span>SWNURSULTAN | SWAROVSKI</span></a>
 					</div>
 					<div class="header__store displayflex">
-						<form action="">
+						<form action="" class="formsearch">
 							<input type="text" class="header__search">
 							<a href="#">
 								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,11 +58,9 @@
 							</a>
 						</form>
 						<div class="header__basket">
-							<a href="busket.html">
-								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M6 16C4.895 16 4.01 16.895 4.01 18C4.01 19.105 4.895 20 6 20C7.105 20 8 19.105 8 18C8 16.895 7.105 16 6 16ZM0 0V2H2L5.595 9.585L4.245 12.035C4.09 12.325 4 12.65 4 13C4 14.105 4.895 15 6 15H18V13H6.425C6.285 13 6.175 12.89 6.175 12.75C6.175 12.705 6.185 12.665 6.205 12.63L7.1 11H14.55C15.3 11 15.955 10.585 16.3 9.97L19.875 3.48C19.955 3.34 20 3.175 20 3C20 2.445 19.55 2 19 2H4.215L3.265 0H0ZM16 16C14.895 16 14.01 16.895 14.01 18C14.01 19.105 14.895 20 16 20C17.105 20 18 19.105 18 18C18 16.895 17.105 16 16 16Z" fill="#353A4B"/>
-								</svg>
-							</a>
+							<a href="busket.html"><img src="images/busketmenu.svg" alt=""></a>
+						</div>
+						<div class="burger">
 						</div>
 					</div>
 				</div>
@@ -73,6 +72,19 @@
 					<div class="menu">
 						<nav class="nav__menu">
 							<ul class="menu__items">
+								<li class="menu__item displaynone">
+									<a href="#" class="lang__link active-lang"><span>Рус</span></a>
+									<a href="#" class="lang__link"><span>Eng</span></a>
+									<a href="#" class="lang__link"><span>Каз</span></a>
+								</li>
+								<li class="menu__item displaynone">
+									<form action="">
+										<div class="form__items">
+											<input type="text" class="header__search">
+											<a href="#"><img src="images/search.svg" alt="" class="searchimg"></a>
+										</div>
+									</form>
+								</li>
 								<li class="menu__item"><a href="#" class="menu__link">Новая коллекция</a></li>
 								<li class="menu__item"><a href="page_jewerly.html" class="menu__link">Ювелирные изделия</a></li>
 								<li class="menu__item"><a href="page_clock.html" class="menu__link">Часы</a></li>
@@ -81,13 +93,12 @@
 								<li class="menu__item"><a href="page_sale.html" class="menu__link">Распродажа</a></li>
 								<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
 							</ul>
-							<div class="burger">
-							</div>
 						</nav>
 					</div>
 					</div>
 				</div>
 			</div>
+		</div>
 	</header>
 	<main>
 		<section class="path">
