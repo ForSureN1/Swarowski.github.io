@@ -19,6 +19,9 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.displaynone {
+	display: none;
+}
 .lang_block {
 	margin-left: 10px;
 	cursor: pointer;
@@ -102,6 +105,16 @@
 	width: 224px;
 	border: none;
 	border-bottom: 1px solid rgba(53, 58, 75, 0.68);
+	padding: 5px;
+}
+
+.form__items {
+	display: flex;
+	justify-content: center;
+}
+
+.form__items a {
+	margin-left: 5px;
 }
 
 .header__basket{
@@ -249,23 +262,6 @@
 	padding: 100px 0;
 }
 
-.new-collection__title{
-	position: relative;
-}
-.new-collection__title::before{
-	position: absolute;
-	content: "Новые коллекции";
-	bottom: 20%;
-	left: 30%;
-	font-family: Playfair Display;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 70px;
-	line-height: 70px;
-	color: #B995B1;
-	opacity: 0.15;
-	z-index: -999;
-}
 
 .title__cards {
 	font-family: Playfair Display;
@@ -384,15 +380,14 @@
 .view-all__link:hover::before{
 	left: 150px;
 }
-
-.jewerly__title{
+.title__cards {
 	position: relative;
 }
-.jewerly__title::before {
+.title__cards span{
     position: absolute;
-    content: "Категории ювелирных изделий";
-    bottom: 20%;
-    left: 16%;
+    bottom: 40%;
+    left: 0;
+    right: 0;
     font-family: Playfair Display;
     font-style: normal;
     font-weight: 400;
@@ -400,7 +395,6 @@
     line-height: 70px;
     color: #B995B1;
     opacity: 0.15;
-    z-index: -999;
 }
 
 .jewerly__item img {
@@ -437,27 +431,6 @@
 	transition: .2s;
 }
 
-.sale__title{
-	position: relative;
-}
-.sale__title::before {
-    position: absolute;
-    content: "Распродажа";
-    bottom: 20%;
-    left: 37%;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: #B995B1;
-    opacity: 0.15;
-    z-index: -999;
-}
-
-
-
-
 .sale__desc{
 	padding: 30px 60px;
 	text-align: center;
@@ -491,25 +464,6 @@
 	outline-radius: 2px;
 	color: #B995B1;
 	transition: .5s;
-}
-
-
-.clock__title{
-	position: relative;
-}
-.clock__title::before {
-    position: absolute;
-    content: "Часы";
-    bottom: 20%;
-    left: 44%;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: #B995B1;
-    opacity: 0.15;
-    z-index: -999;
 }
 
 .categories__item  img {
@@ -549,24 +503,6 @@
 	color: #333333;
 }
 
-
-.accessories__title{
-	position: relative;
-}
-.accessories__title::before {
-    position: absolute;
-    content: "Акссессуары";
-    bottom: 20%;
-    left: 37%;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: #B995B1;
-    opacity: 0.15;
-    z-index: -999;
-}
 .left__image {
 	display: flex;
     max-width: 683px;
@@ -734,28 +670,6 @@
 	100%{opacity: 1}
 }
 
-.decorations__title{
-	position: relative;
-}
-.decorations__title::before {
-    position: absolute;
-    content: "Украшения";
-    bottom: 20%;
-    left: 38%;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: #B995B1;
-    opacity: 0.15;
-    z-index: -999;
-}
-/*.decorations__items{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-	grid-gap: 20px; 
-}*/
 .decoration__item{
 	width: 33%;
 	padding: 30px 50px;
@@ -798,23 +712,6 @@
 }
 
 
-.home__title{
-	position: relative;
-}
-.home__title::before {
-    position: absolute;
-    content: "Всё для дома";
-    bottom: 20%;
-    left: 37%;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: #B995B1;
-    opacity: 0.15;
-    z-index: -999;
-}
 /*.home__items{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(380px,1fr));
@@ -856,23 +753,6 @@
 }
 
 
-.video__title{
-	position: relative;
-}
-.video__title::before {
-    position: absolute;
-    content: "Откройте для себя Swarovski Swan";
-    bottom: 20%;
-    left: 14%;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: #B995B1;
-    opacity: 0.15;
-    z-index: -999;
-}
 .footer__border {
 	border-top: 1px solid #5A5E6B;
 	border-bottom: 1px solid #5A5E6B;
@@ -923,34 +803,22 @@
 	width: 40px;
 	height: 40px;
 	cursor: pointer;
-	background: url(../images/burger.svg) no-repeat;
-	background-size: contain;
+	background: url(../images/burger.svg) center no-repeat;
+	background-size: 28px;
 	transition: .3s;
+	margin-left: 20px;
 }
 
 .burger_active{
 	width: 40px;
 	height: 40px;
-	background: url(../images/close.svg) no-repeat;
-	background-size: contain;
+	background: url(../images/cancel.svg) center no-repeat;
+	background-size: 28px;
 	transition: .3s;
 }
 
 
 /*-----------------------------------burger---------------------------------*/
-
-.new-collection__title::before,
-.view-all__link::before,
-.jewerly__title::before,
-.sale__title::before,
-.clock__title::before,
-.accessories__title::before,
-.decorations__title::before,
-.home__title::before,
-.video__title::before {
-	left: 0;
-	right: 0;
-}
 
 
 .path__container {
@@ -1086,9 +954,12 @@
 }
 
 .contacts__container {
-	padding: 100px 0 30px 0;
+	padding: 100px 0 0 0;
 }
-
+.backgroundcol {
+	background: #fff;
+	padding: 30px 0;
+}
 .contacts__info {
 	display: flex;
 	justify-content: space-between;
@@ -1179,45 +1050,6 @@
 	outline: 1px solid #A06593;
 }
 
-.contacts__title {
-	position: relative;
-}
-
-.contacts__title::before {
-    position: absolute;
-    content: "Контакты";
-    bottom: 20%;
-    right: 0;
-    left: 0;
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: rgb(185, 149, 177);
-    opacity: 0.15;
-    z-index: -999;
-}
-
-.feedback__title {
-	position: relative;
-}
-
-.feedback__title::before {
-    position: absolute;
-    content: "Обратная связь";
-    bottom: 20%;
-    right: 0;
-    left: 0;
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    color: rgb(185, 149, 177);
-    opacity: 0.15;
-    z-index: -999;
-}
 
 .about-item__images {
 	display: flex;
