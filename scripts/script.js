@@ -1,9 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => { 
+
+  //slider main page
 	$('#slider-internal').slick({
+    autoplay:true,
+    infinite: true,
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+        }
+      }]
+  });
+
+
+  //slider internal page
+  $('#slider1').slick({
       autoplay:true,
       infinite: true,
-      dots: false,
-      arrows: false,
+      dots: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       responsive: [
@@ -13,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
             dots: false,
           }
         }]
-    }); 
+    });
+
+
 	// Burger menu
 	const burger = document.querySelector('.burger');
 	const menu = document.querySelector('.menu__items')
@@ -74,9 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
           </td>
           <td class="product__count">
             <div class="count-items">
-              <button class="js-plus"></button>
-              <p class="js-cart-item-quantity">${quantity}</p>
               <button class="js-minus"></button>
+              <p class="js-cart-item-quantity">${quantity}</p>
+              <button class="js-plus"></button>
             </div>
           </td>
           <td class="product__price">
