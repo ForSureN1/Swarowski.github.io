@@ -34,6 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }]
     });
 
+  //slider change images 
+  $('.small-images__item').on("click", function(){
+  var dot_index = $(this).index();
+  if( !$(this).hasClass('active') ){
+    $('.small-images__item.active').removeClass('active');
+    $(this).addClass('active');
+    $('#slider-internal').slick('slickGoTo', dot_index);
+  }
+  console.log(dot_index)
+  });
+  $('#slider-internal').on("afterChange", function(){
+  var cur_index = $('#slider-internal').slick('slickCurrentSlide');
+  $('.small-images__item.active').removeClass('active');
+  $('.small-images__item').eq(cur_index).addClass('active');
+  });
+
 
 	// Burger menu
 	const burger = document.querySelector('.burger');
@@ -78,12 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //отображаем добавленный товар в корзине
-    const renderCartItem = ({articul, name, desc, color, size, price, totalprice, src, quantity}) => {
+    const renderCartItem = ({articul, name, desc, color, size, price, totalprice, src, quantity, href}) => {
       const cartItemDOMElement = document.createElement('tr');
       const cartItemTemplate = `
         <tr class="product__item">
           <td class="product__title">
-            <a href="#"><img src="${src}"></a>
+            <a href="${href}"><img src="${src}"></a>
           </td>
           <td class="product__name">
             <h2>${name}</h2>
@@ -223,9 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const color = productDOMElement.getAttribute('data-product-color');
       const price = productDOMElement.getAttribute('data-product-price');
       const src = productDOMElement.getAttribute('data-product-img');
+      const href = window.location.href;
       const quantity = 1;
       const totalprice = quantity * +(price);
-      return  { name, desc, articul, size, color, price, totalprice, src, quantity,};
+      return  { name, desc, articul, size, color, price, totalprice, src, quantity, href};
     }
 
     const renderCart = () => {
@@ -244,17 +261,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // disabledButton();
 
     const disabledButton = () => {
-        console.log(cart)
+        // console.log(cart)
         const test = document.querySelectorAll('.js-product')
-        console.log(parent)
+        // console.log(parent)
         if (cart.hasOwnProperty()){
                   console.log('Найдено')
         }
         for(let i = 0; i < test.length; i++) {
             const attr = (test[i].getAttribute('data-product-articul'))
             const parent = test[i].querySelector('.js-buy')
-            console.log(parent)
-            console.log(cart.hasOwnProperty(attr))
+            // console.log(parent)
+            // console.log(cart.hasOwnProperty(attr))
             if (cart.hasOwnProperty(attr)) {
               parent.classList.add('disabled')
             }
