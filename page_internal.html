@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/jquery.fancybox.css">
 	<link rel="stylesheet" href="style/global.css">
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/media.css">
@@ -107,23 +108,37 @@
 						<div class="about-item__preview">
 							<div class="about-item__images">
 								<div class="small-images">
-									<img src="images/photo2.jpg" alt="">
-									<img src="images/photo3.jpg" alt="">
-									<img src="images/photo2.jpg" alt="">
-									<img src="images/photo3.jpg" alt="">
+									<div class="small-images__item">
+										<a href="javascript:;" class="product_dots_item"><img src="images/photo1.jpg" alt=""></a>
+									</div>
+									<div class="small-images__item">
+										<a href="javascript:;" class="product_dots_item"><img src="images/photo3.jpg" alt=""></a>
+									</div>
+									<div class="small-images__item">
+										<a href="javascript:;" class="product_dots_item"><img src="images/photo2.jpg" alt=""></a>
+									</div>
+									<div class="small-images__item">
+										<a href="javascript:;" class="product_dots_item"><img src="images/photo3.jpg" alt=""></a>
+									</div>
+									<div class="small-images__item">
+										<a href="javascript:;" class="product_dots_item"><img src="images/photo3.jpg" alt=""></a>
+									</div>
+									<div class="small-images__item">
+										<a href="javascript:;" class="product_dots_item"><img src="images/photo3.jpg" alt=""></a>
+									</div>
 								</div>
 								<div class="big-images">
 									<div id="slider-internal">
-										<div class="slider-internal__item">
+										<div class="slider-internal__item" data-fancybox="gallery" data-src="images/photo1.jpg">
 											<img src="images/photo1.jpg" alt="">
 										</div>
-										<div class="slider-internal__item">
-											<img src="images/photo1.jpg" alt="">
+										<div class="slider-internal__item" data-fancybox="gallery" data-src="images/photo2.jpg">
+											<img src="images/photo2.jpg" alt="">
 										</div>
-										<div class="slider-internal__item">
-											<img src="images/photo1.jpg" alt="">
+										<div class="slider-internal__item" data-fancybox="gallery" data-src="images/photo3.jpg">
+											<img src="images/photo3.jpg" alt="">
 										</div>
-										<div class="slider-internal__item">
+										<div class="slider-internal__item" data-fancybox="gallery" data-src="images/photo1.jpg">
 											<img src="images/photo1.jpg" alt="">
 										</div>
 									</div>
@@ -401,6 +416,7 @@
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fancybox.min.js"></script>
 	<script src="scripts/script.js"></script>
 </body>
 </html>
