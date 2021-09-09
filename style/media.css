@@ -682,4 +682,10 @@
 		.feedback__send {
 			font-size: 14px;
 		}
+		.product__body tr {
+			margin-bottom: 15px;
+		}
+		.product__body tr:last-child {
+			margin-bottom: 0px;
+		}
 	}
