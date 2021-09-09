@@ -958,10 +958,19 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 22px;
+	width: 90%;
+	margin: 0 auto;
+}
+.feedback__form form {
+	width: 90%;
+}
+.form-one form {
+	width: 70%;
 }
 .feedback__data {
     display: flex;
     text-align: left;
+    justify-content: space-between;
 }
 .feedback__form p {
 	margin-bottom: 10px;
@@ -969,7 +978,11 @@
 .feedback__name,
 .feedback__phone {
 	height: 59px;
-	width: 408px;
+	width: 100%;
+}
+.input__name,
+.input__phone {
+	width: 49%;
 }
 .feedback__name{
 	margin-right: 50px;
@@ -1057,7 +1070,7 @@
 	margin-left: 30px;
 }
 .big-images {
-	width: 70%;
+	width: 77%;
 }
 
 .big-images .slick-list {
@@ -1072,11 +1085,13 @@
 
 .about-item__content {
 	display: flex;
+	justify-content: space-between;
 }
 
 .about-item__specification {
 	display: flex;
 	margin-left: 30px;
+	width: 44%;
 }
 .about-item__description {
 	display: flex;
@@ -1326,7 +1341,6 @@
 }
 .product__head th:first-child {
 	text-align: left;
-	width: 13%;
 }
 
 .product__body td {
@@ -1341,6 +1355,8 @@
 .product__title img{
 	width: 150px;
 	height: 150px;
+	border: 1px solid #D8D8D8;
+	margin: 0;
 }
 .remove {
 	background: url('../images/remove.svg') no-repeat center;
@@ -1363,7 +1379,7 @@
 	font-family: Playfair Display;
 	font-size: 36px;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 30px;
 	letter-spacing: 0em;
 	text-align: left;
@@ -1398,10 +1414,12 @@
 
 .count__product,
 .count__summ {
-	width: 30%;
 	display: flex;
-	justify-content: space-between;
-	margin: 0 auto;
+	justify-content: center;
+}
+.count__product span:first-child,
+.count__summ span:first-child {
+	width: 30%;
 }
 .count__summ {
 	padding-top: 30px;
@@ -1431,12 +1449,12 @@
 }
 .js-plus {
 	background: url(../images/plus.png) no-repeat center;
-	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .js-minus {
 	background: url(../images/minus.png) no-repeat center;
-	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .js-minus,
@@ -1448,5 +1466,5 @@
 	height: 26px;
 	border: none;
 	cursor: pointer;
-	background-size: 26px;
+	background-size: 22px;
 }
