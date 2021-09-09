@@ -63,6 +63,15 @@
 		font-size: 50px;
     	bottom: 20%;	
 	}
+	.buy__product {
+		padding: 12px 100px;
+	}
+	.about-item__characters {
+	    margin-top: 10px;
+	}
+	.description-item__container {
+		padding: 100px 0;
+	}
 }
 @media (max-width: 1200px){
 	.container{
@@ -214,12 +223,6 @@
     	justify-content: space-between;
     	margin-top: 20px;
 	}
-	.small-images img {
-    	width: 33%;
-	}
-	.small-images img:last-child{
-		display: none;
-	}
 	.about-item__images {
     	flex-direction: column-reverse;
     	justify-content: space-between;
@@ -248,6 +251,44 @@
 	}
 	.product__name h2{
 		font-size: 22px;
+	}
+	.slider-internal__item img {
+		height: auto;
+	}
+	.about-item__name {
+		font-size: 26px;
+	}
+	.about-item__text {
+		margin-top: 5px;
+	}
+	.color-text {
+		margin-top: 10px;
+	}
+	.about-item__header,
+	.about-item__text,
+	.about-item__price,
+	.color-text,
+	.size__item,
+	.buy__product,
+	.characters-name p, 
+	.characters-data p {
+		font-size: 18px;
+	}
+	.description-item__container {
+		padding: 80px 0;
+	}
+	.small-images {
+		height: 180px;
+	}
+	.small-images__item {
+		flex-shrink: 0;
+		margin-right: 20px;
+	}
+	.elem-top p {
+		font-size: 16px;
+	}
+	.categories__desc {
+		font-size: 16px;
 	}
 }
 
@@ -457,9 +498,6 @@
 	.about-item__characters {
 		margin-top: 25px;
 	}
-	.small-images img {
-    	max-width: 30%;
-	}
 	.about-item__preview {
 		width: 100%;
 	}
@@ -515,6 +553,30 @@
 	.input__name, .input__phone {
 		width: 100%;
 	}
+	.slider-internal__item img {
+    	width: 500px;
+    	height: 500px;
+	}
+	.about-item__name {
+		font-size: 20px;
+	}
+	.about-item__header, .about-item__text, .about-item__price, .color-text, .size__item, .buy__product, .characters-name p, .characters-data p {
+		font-size: 16px;
+	}
+	.about-item__characters,
+	.about-item__buy {
+		margin-top: 5px;
+	}
+	.characters__row {
+		margin-top: 10px;
+	}
+	.about-item__specification {
+		display: block;
+		width: 100%;
+	}
+	.characters-name {
+		width: 30%;
+	}
 }
 @media(max-width: 776px) {
 	.header__logo {
@@ -567,6 +629,12 @@
 	.feedback__send {
 		padding: 15px 0;
 		width: 100%;
+	}
+	.characters-name {
+		width: 50%;
+	}
+	.description-item__text {
+		font-size: 12px;
 	}
 }
 @media(max-width: 576px) {
