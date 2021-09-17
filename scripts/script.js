@@ -51,6 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  //Отключение dots при слайдере с 1 элементом
+  let slider = document.querySelectorAll('.slider__swarowski .slick-track .slider__item');
+  let dotsSlider = document.querySelector('.slider__swarowski .slick-dots');
+  const disableDots = () => {
+    if (slider.length <= 1) {
+      dotsSlider.classList.add('hidden');
+    }
+  }
+  disableDots();
+
+
 	// Burger menu
 	const burger = document.querySelector('.burger');
 	const menu = document.querySelector('.menu__items')
@@ -145,20 +156,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //подсчитываение колличества и суммы товара
     const totalBusket = () => {
-      let summ_array = document.querySelectorAll('.js-cart-item-totalprice');
-      // let totalprice = document.querySelectorAll('.js-cart-item-totalprice');
       let totalcount = 0;
       const ids = Object.keys(cart);
-      // console.log(ids)
       for (let i = 0; i < ids.length; i++) {
-        const id = ids[i]
-        // totalprice += +(cart[id].totalprice);
-        totalcount += +(cart[id].quantity);
-        totalprice = +(totalcount) * +(cart[id].price);
+        const articul = ids[i]
+        totalcount += +(cart[articul].quantity);
+      }
+      let total = 0;
+      const price = document.querySelectorAll('.js-cart-item-totalprice');
+      for (let i = 0; i < price.length; i++) {
+        console.log(price[i].innerHTML)
+        total = total + parseInt(price[i].innerHTML);
       }
 
-      cartTotalPriceDOMElement.textContent = totalprice + ' тг';
-      cartTotalSummaDOMElement.textContent = totalprice + ' тг';
+      cartTotalPriceDOMElement.textContent = total + ' тг';
+      cartTotalSummaDOMElement.textContent = total + ' тг';
       cartItemsCounterDOMElement.textContent = totalcount + 'х';
       if (ids.length == 0) {
         cartTotalPriceDOMElement.textContent = 0;
